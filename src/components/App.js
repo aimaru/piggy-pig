@@ -4,13 +4,16 @@ import { Switch, Route } from 'react-router-dom';
 // import Typing from 'react-typing-animation';
 // import { Thumbnail } from 'react-bootstrap';
 
-import AppHolder from '../AppHolder/AppHolder';
-import Login from '../AppHolder/Login';
+import Login from '../containers/Login';
+import StartPage from '../containers/StartPage';
 
 const App = () => {
   return(  
 
     <Fragment>
+
+{/* !!!!!! Add animation later !!!!!!! */}
+
       {/* {
     this.props.loginStore.isLoading ? */}
       {/* <div className="App">
@@ -23,7 +26,7 @@ const App = () => {
       </div> */}
     {/* : */}
       <Switch>
-        <Route exact path='/' component={AppHolder} />
+        <Route exact path='/' component={StartPage} />
         <Route path='/login' component={Login} />
       </Switch>
     {/* } */}

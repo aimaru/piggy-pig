@@ -5,8 +5,13 @@ $main-pink: #f59ba6;
   // padding: 0px;
 }
 
+html, body {
+  min-height: 100%;
+}
+
 .App {
   text-align: center;
+  min-height: 100%;
 
   .App-header {
     background-color: $main-pink;

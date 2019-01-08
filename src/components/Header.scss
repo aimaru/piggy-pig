@@ -1,0 +1,48 @@
+$main-pink: #f59ba6;
+
+.Header {
+
+  
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-top: 15px;
+  }
+
+  nav {
+    background-color: $main-pink;
+    border-radius: unset;
+    height: 60px;
+    margin-bottom: unset;
+
+    .container {
+      min-width: 100%;
+    }
+
+    .navbar-header {
+      position: absolute;
+      top: 5px;
+    }
+
+    .navbar-brand {
+      padding: 2px 5px;
+      margin-left: 0 !important;
+      border: unset;
+      background-color: transparent;
+
+      img {
+        width: 45px;
+        border: 1px solid $main-pink;
+        border-radius: 75%;
+        background-color: #fff;
+      }
+
+      a {
+        background: unset;
+        border: unset;
+      }
+    }
+  }
+}

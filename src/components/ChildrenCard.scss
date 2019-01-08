@@ -1,0 +1,153 @@
+$main-pink: #f59ba6;
+$water-blue: #bdeaee; // color for parents
+$skin-yellow: #ffdbac; // kids color
+
+.ChildrenCard {
+  margin-bottom: 30px;
+  border: 2px solid $water-blue;
+  border-radius: 10px;
+
+  p {
+    color: #526b86;
+  }
+
+  .amount-holder {
+    margin: 25px 0;
+    border: 2px dotted $water-blue;
+    border-radius: 10px;
+  }
+
+  .form-control-file {
+    width: 70px;
+    height: 70px;
+    background-color: $water-blue;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 auto;
+
+    @media only screen and (min-width: 576px) {
+      width: 85px;
+      height: 85px;
+    }
+  }
+
+  .form-group {
+    max-width: 50%;
+
+    @media only screen and (min-width: 576px) {
+      max-width: 50%;
+    }
+
+    .filelabel {
+      background-color: blue;
+      color: white;
+      border: blue;
+      height: 80px;
+      width: 80px;
+      border-radius: 4em;
+      font-size: 12px;
+      object-fit: cover;
+
+      @media only screen and (min-width: 576px) {
+        height: 110px;
+        width: 110px;
+        font-size: 14px;
+      }
+      @media only screen and (min-width: 576px) {
+        height: 110px;
+        width: 110px;
+        font-size: 14px;
+      }
+    }
+
+    .filelabel:hover,
+    .fa-plus-circle:hover {
+      // opacity: 0.5;
+      border: blue;
+      // cursor: pointer;
+      // pointer-events: none;
+    }
+
+    .fa-plus-circle {
+      left: 70px;
+      top: 10px;
+      position: relative;
+      height: 28px;
+      width: 30px;
+      background-color: #fff;
+      color: #ccc;
+      border-radius: 1.3rem;
+      cursor: pointer;
+
+      // @media only screen and (min-width: 576px) {
+      // 	left: -25px;
+      // 	top: 12px;
+      // 	height: 33px;
+      //   width: 35px;
+
+      // left: 78px;
+      // top: 10px;
+      // height: 33px;
+      // width: 35px;
+      // }
+    }
+
+    .filelabel img {
+      vertical-align: bottom;
+    }
+    .filelabel:hover {
+      opacity: 0.5;
+      border: 2px solid red;
+      cursor: pointer;
+    }
+    #filesend {
+      display: none;
+    }
+  }
+
+  .avatar {
+    margin-top: 35px;
+    padding-left: 0;
+  }
+
+  .name {
+    margin: 10px 0 0 0;
+    font-weight: 600;
+    font-size: 1.75rem;
+    text-align: center;
+  }
+
+  .amount {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 800;
+    font-size: 2rem;
+    border-bottom: 1.5px dotted $water-blue;
+  }
+
+  .income {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 1.75rem;
+    border-bottom: 1.5px dotted $water-blue;
+    & > p {
+      color: #0eae10;
+    }
+  }
+
+  .expenditure {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 1.75rem;
+
+    & > p {
+      color: #ee8491;
+    }
+  }
+
+}

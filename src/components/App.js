@@ -5,7 +5,8 @@ import { Switch, Route } from 'react-router-dom';
 // import { Thumbnail } from 'react-bootstrap';
 
 import Login from '../containers/Login';
-import StartPage from '../containers/StartPage';
+import StartPageForChild from '../containers/StartPageForChild';
+import SelectChildPage from './SelectChildModal';
 
 const App = () => {
   return(  
@@ -26,8 +27,9 @@ const App = () => {
       </div> */}
     {/* : */}
       <Switch>
-        <Route exact path='/' component={StartPage} />
+        <Route exact path='/' component={StartPageForChild} />
         <Route path='/login' component={Login} />
+        <Route path='/selectchild' component={SelectChildPage} />
       </Switch>
     {/* } */}
       </Fragment>

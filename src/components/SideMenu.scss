@@ -1,0 +1,40 @@
+$main-pink: #f59ba6;
+
+.SideMenu {
+  padding: 0;
+  border-right: 1px solid pink;
+  min-height: 100vh;
+
+  li {
+    display: flex;
+    align-items: center;
+    margin: 2px 0 0 15px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    // color: #708090;
+    color: #526b86;
+
+    & > span {
+      margin: 22px 0 0 13px;
+    }
+  }
+
+  .house-icon,
+  .transaction-icon,
+  .mission-icon,
+  .logout-icon {
+    width: 40px;
+    height: 40px;
+    margin: 25px 0 0 5px;
+  }
+
+  button,
+  li {
+    border: unset;
+  }
+
+  .list-group-item {
+    padding: 0;
+  }
+  
+}

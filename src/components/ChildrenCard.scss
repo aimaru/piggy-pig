@@ -3,16 +3,19 @@ $water-blue: #bdeaee; // color for parents
 $skin-yellow: #ffdbac; // kids color
 
 .ChildrenCard {
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
   border: 2px solid $water-blue;
   border-radius: 10px;
+  display: flex;
+  margin: 0 auto 20px auto;
+  float: unset;
 
   p {
     color: #526b86;
   }
 
   .amount-holder {
-    margin: 25px 0;
+    margin: 25px 10px;
     border: 2px dotted $water-blue;
     border-radius: 10px;
   }

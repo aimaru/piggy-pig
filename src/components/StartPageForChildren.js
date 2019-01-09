@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 import "./StartPageForChildren.scss";
 import ChildrenCard from "./ChildrenCard";
@@ -10,21 +10,27 @@ import Goal from "./Goal";
 
 const StartPageForChildren = () => (
   <Fragment>
-    <Col xs={12} sm={9} md={10} className="StartPageForChildrene">
-      <Col xs={12} className="avatar">
-        <ChildrenCard />
-      </Col>
+    <Col xs={12} sm={9} md={10} className="StartPageForChildren">
+      
+      <Row className="show-grid">
+        {/* <Col xs={12} className="avatar"> */}
+          <ChildrenCard />
+        {/* </Col> */}
+      </Row>
 
-      <Col xs={12} className="button">
-        <h2>Lägg till dagens ... </h2>
-        <SelectButton />
-      </Col>
+      <Row className="show-grid">
+        {/* <Col xs={12} className="button"> */}
+          <h2>Lägg till dagens ... </h2>
+          <SelectButton />
+        {/* </Col> */}
+      </Row>
 
-      <Col xs={12} className="goal-holder">
-        <h2>Månadens mål</h2>
-        <Goal />
-      </Col>
-
+      <Row className="show-grid">
+        {/* <Col xs={12} className="goal-holder"> */}
+          <h2>Månadens mål</h2>
+          <Goal />
+        {/* </Col> */}
+      </Row>
     </Col>
   </Fragment>
 );

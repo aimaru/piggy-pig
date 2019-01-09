@@ -40,7 +40,7 @@ const SELECT_ICONS = [
 
 
 const SelectButton = () => (
-  <Col xsOffset={1} xs={10} className="SelectButton">
+  <Col xs={9} className="SelectButton">
     <ListGroup>
       
       {/* <ButtonToolbar className="SelectButton"> */}
@@ -60,7 +60,7 @@ const SelectButton = () => (
       })}
     </ListGroup>
 
-    <Col xsOffset={1} />
+    <Col />
   </Col>
 );
 

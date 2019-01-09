@@ -3,7 +3,8 @@ import { Col, FormGroup } from "react-bootstrap";
 import "./ChildrenCard.scss";
 
 const ChildrenCard = () => (
-  <Col xsOffset={1} xs={10} className="ChildrenCard">
+  // <Col xsOffset={2} xs={8} className="ChildrenCard">
+  <Col xs={9} className="ChildrenCard">
     <Col xs={3} className="avatar">
       <form>
         <FormGroup
@@ -35,7 +36,7 @@ const ChildrenCard = () => (
       </Col>
     </Col>
 
-    <Col xsOffset={1} />
+    {/* <Col xsOffset={2} /> */}
   </Col>
 );
 

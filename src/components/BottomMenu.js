@@ -3,7 +3,6 @@ import { Grid, Row, Col } from 'react-bootstrap';
 import './BottomMenu.scss';
 // import { Thumbnail } from 'react-bootstrap';
 
-// import IconButton from './IconButton';
 import house from './img/house.svg';
 import piggyMenu from './img/piggybank-menu2.svg';
 import getMoney from './img/get-money.svg';
@@ -35,14 +34,7 @@ export default class BottomMenu extends React.Component {
           <img src={logOut} alt="log out icon" className="log-out-icon" />
           <p>Loggut</p>
         </div>
-       {/*   <IconButton  
-            // imgClassName={i._id === this.store.active._id ? 'active' : ''}
-            // key={i._id}
-            // props={i}
-            // handleClick={() => {this.store.goToOrganization(o); this.store.getProcesses()} }
-          />
- */}
-
+    
       </Col>
       </Row>
       </Grid>

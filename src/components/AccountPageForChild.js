@@ -4,6 +4,7 @@ import { Col } from "react-bootstrap";
 import "./AccountPageForChild.scss";
 import ChildrenCard from "./ChildrenCard";
 import SelectButton from "./SelectButton";
+import Goal from "./Goal";
 
 // import house from '../components/img/house.svg';
 
@@ -15,16 +16,14 @@ const AccountPageForChild = () => (
       </Col>
 
       <Col xs={12} className="button">
-        <h2>Lägg till dagens </h2>
+        <h2>Lägg till dagens ... </h2>
         <SelectButton />
       </Col>
 
-      <Col xs={12} className="goal">
-        <h2>Lägg till dagens </h2>
-        {/* <SelectButton /> */}
+      <Col xs={12} className="goal-holder">
+        <h2>Månadens mål</h2>
+        <Goal />
       </Col>
-
-
 
     </Col>
   </Fragment>

@@ -17,7 +17,7 @@ export default class BottomMenu extends React.Component {
       <footer className="BottomMenu">
       <Grid fluid>
         <Row>
-      <Col xs={3} mdHidden className="BottomMenu">
+      <Col xs={3} mdHidden lgHidden className="BottomMenu">
         <div>
           <img src={house} alt="house icon" className="home-icon" />
           <p>Hem</p>

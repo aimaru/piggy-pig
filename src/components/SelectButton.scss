@@ -1,5 +1,6 @@
 $main-pink: #f59ba6;
-$skin-yellow: #ffdbac;
+$water-blue: #bdeaee; // color for parents
+$skin-yellow: #ffdbac; // kids color
 
 .SelectButton {
   padding: 0;
@@ -8,10 +9,10 @@ $skin-yellow: #ffdbac;
   z-index: 1;
 
   ul {
-    margin-bottom: 30px;
-    border: 2px solid $skin-yellow;
+    margin-bottom: 20px;
+    border: 2px solid $water-blue;
     border-radius: 10px;
-    padding: 40px 20px;
+    padding: 35px 20px;
     display: flex;
     justify-content: space-around;
   }

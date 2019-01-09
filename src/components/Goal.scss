@@ -1,0 +1,63 @@
+$main-pink: #f59ba6;
+$water-blue: #bdeaee; // color for parents
+$skin-yellow: #ffdbac; // kids color
+
+.Goal {
+  padding: 0;
+  margin-top: 25px;
+  max-height: 100vh;
+  z-index: 1;
+
+  .form-group {
+    margin-bottom: 10px;
+    border: 2px solid $water-blue;
+    border-radius: 10px;
+    padding: 40px 0 20px 45px;
+
+    input {
+      width: 50%;
+    }
+
+    .control-label {
+      color: #526b86;
+      margin-bottom: 7px;
+      font-size: 1.5rem; 
+      font-weight: 600;
+    }
+
+    .input-holder {
+      display: flex;
+      justify-content: start;
+
+      & > p {
+        margin: 4px 50px 20px 10px;
+        font-weight: 600;
+        font-size: 1.7rem;
+        color: #526b86;
+      }
+    }
+
+    button {
+      background-color: #9acd32cf;
+      color: #696969;
+      font-size: 1.65rem;
+      font-weight: 600;
+      box-shadow: 2px 2px 4px #d3d3d3;
+      border: unset;
+    }
+
+    .last-month-result {
+      color: #696969;
+      font-weight: 700;
+      font-size: 1.65rem;
+
+      & ~ span {
+      color: #696969;
+      font-weight: 700;
+      font-size: 1.65rem;
+      }
+    }
+  }
+
+
+}

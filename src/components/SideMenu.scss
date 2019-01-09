@@ -2,8 +2,12 @@ $main-pink: #f59ba6;
 
 .SideMenu {
   padding: 0;
-  border-right: 1px solid pink;
-  min-height: 100vh;
+  border-right: 1.1px solid $main-pink;
+  
+  // Make the side menu and main contents the same height 
+  padding-bottom: 32768px;
+  margin-bottom: -32768px;
+  overflow: hidden;
 
   li {
     display: flex;
@@ -28,15 +32,6 @@ $main-pink: #f59ba6;
     margin: 25px 0 0 5px;
   }
 
-  .house-btn,
-  .transaction-btn,
-  .mission-btn,
-  .logout-btn {
-    width: 40px;
-    height: 40px;
-    margin: 10px 0 15px 0;
-  }
-
   button,
   li {
     border: unset;
@@ -45,5 +40,4 @@ $main-pink: #f59ba6;
   .list-group-item {
     padding: 0;
   }
-  
 }

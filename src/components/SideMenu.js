@@ -5,10 +5,10 @@ import "./SideMenu.scss";
 // import PropTypes from 'prop-types';
 
 
-// Icons made by <a href="https://www.flaticon.com/authors/vectors-market"	
-// Icons made by <a href="https://www.flaticon.com/authors/popcorns-arts"
-// Icons made by <a href="https://www.flaticon.com/authors/smashicons"
-// Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" 
+// Icons made by <a href="https://www.flaticon.com/authors/vectors-market">	
+// Icons made by <a href="https://www.flaticon.com/authors/popcorns-arts">
+// Icons made by <a href="https://www.flaticon.com/authors/smashicons">
+// Icons made by <a href="https://www.flaticon.com/authors/dave-gandy">
 import house from "./img/house.svg";
 import transaction from "./img/transaction.svg";
 import mission from "./img/mission.svg";
@@ -19,45 +19,44 @@ const SIDEMENU_ICONS = [
     id: 1,
     name: "Hem",
     img: house,
-    buttonClassName: "house-btn",
+    alt: "house icon",
     imgClassName: "house-icon"
   },
   {
     id: 2,
     name: "Transaktion",
     img: transaction,
-    buttonClassName: "transaction-btn",
+    alt: "transaction icon",
     imgClassName: "transaction-icon"
   },
   {
     id: 3,
     name: "Uppgifter",
     img: mission,
-    buttonClassName: "mission-btn",
+    alt: "mission icon",
     imgClassName: "mission-icon"
   },
   {
     id: 4,
     name: "Loggut",
     img: logOut,
-    buttonClassName: "logout-btn",
+    alt: "logout icon",
     imgClassName: "logout-icon"
   }
 ];
 
-const sideMenu = () => (
+const SideMenu = () => (
   <aside>
     <Col xsHidden sm={3} md={2} className="SideMenu">
       <ListGroup>
         {SIDEMENU_ICONS.map(i => {
           return (
-            <ListGroupItem>
+            <ListGroupItem key={i.id}>
               {/* <ButtonToolbar className="SelectButton"> */}
               {/* <Button  type="button" className={i.buttonClassName}> */}
                 <img
-                key={i.id}
                   className={i.imgClassName}
-                  alt={i.imgClassName}
+                  alt={i.alt}
                   src={i.img}
                 />
                 <span>
@@ -72,6 +71,6 @@ const sideMenu = () => (
   </aside>
 );
 
-export default sideMenu;
+export default SideMenu;
 
 

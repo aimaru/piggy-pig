@@ -1,0 +1,74 @@
+$main-pink: #f59ba6;
+$water-blue: #bdeaee; // color for parents
+$skin-yellow: #ffdbac; // kids color
+
+.SelectButton {
+  padding: 0;
+  margin-top: 25px;
+  max-height: 100vh;
+  z-index: 1;
+
+  ul {
+    margin-bottom: 20px;
+    border: 2px solid $water-blue;
+    border-radius: 10px;
+    padding: 35px 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    margin: 2px 0 0 15px;
+    font-size: 1.65rem;
+    font-weight: 600;
+    // color: #708090;
+    // color: #526b86;
+    color: #f89174;
+
+    & > span {
+      margin-left: 13px;
+      // color: #808080;
+      // color: #556b2f;
+      color: #696969;
+    }
+  }
+
+  .dollar-icon,
+  .savings-icon,
+  .goal-icon {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    background-color: #fff;
+  }
+
+  .dollar-btn {
+    background-color: $main-pink !important;
+  }
+
+  .savings-btn {
+    background-color: #9acd32cf !important;
+  }
+
+  .goal-btn {
+    background-color: #ffcc74;
+  }
+
+  button {
+    border: unset;
+  }
+
+  .list-group-item {
+    padding: 5px 15px 5px 5px;
+    margin: 10px 0;
+    border: unset;
+    border-radius: 30px;
+    // background-color: #9acd32cf;
+    background-color: #ffcc74;
+    box-shadow: 2px 2px 4px #d3d3d3;
+  }
+  
+}

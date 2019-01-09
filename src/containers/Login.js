@@ -2,8 +2,8 @@ import React from 'react';
 
 // import PropTypes from 'prop-types';
 // import App from './App';
-import Header from './Header';
-import SideMenu from './SideMenu';
+import Header from '../components/Header';
+import SideMenu from '../components/SideMenu';
 
 
 
@@ -14,6 +14,7 @@ export default class Login extends React.Component {
       <div>
         <Header />
         <SideMenu />
+        
         
    
       </div>      

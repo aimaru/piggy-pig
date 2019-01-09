@@ -5,7 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 // import { Thumbnail } from 'react-bootstrap';
 
 import Login from '../containers/Login';
-import StartPageForChild from '../containers/StartPageForChild';
+import StartPageForChildren from '../containers/StartPageForChildren';
 import SelectChildPage from './SelectChildModal';
 
 const App = () => {
@@ -27,7 +27,7 @@ const App = () => {
       </div> */}
     {/* : */}
       <Switch>
-        <Route exact path='/' component={StartPageForChild} />
+        <Route exact path='/' component={StartPageForChildren} />
         <Route path='/login' component={Login} />
         <Route path='/selectchild' component={SelectChildPage} />
       </Switch>

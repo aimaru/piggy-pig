@@ -3,7 +3,11 @@ $main-pink: #f59ba6;
 .SideMenu {
   padding: 0;
   border-right: 1px solid pink;
-  min-height: 100vh;
+  
+  // Make the side menu and main contents the same height 
+  padding-bottom: 32768px;
+  margin-bottom: -32768px;
+  overflow: hidden;
 
   li {
     display: flex;
@@ -36,5 +40,4 @@ $main-pink: #f59ba6;
   .list-group-item {
     padding: 0;
   }
-  
 }

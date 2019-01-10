@@ -1,0 +1,35 @@
+$main-pink: #f59ba6;
+$water-blue: #bdeaee; // color for parents
+$skin-yellow: #ffdbac; // kids color
+$light-green: #cdeac0;
+
+.Transaction {
+  margin-top: 30px;
+
+  h2 {
+    margin: 0;
+    font-weight: 800;
+    font-size: 2.25rem;
+    text-shadow: 0.2px 0.2px moccasin;
+    color: #526b86;
+    // backgro
+  }
+
+  i {
+    color: #0eae10;
+    margin: 0 25px;
+  }
+
+  .date-holder {
+    margin: 20px 0 50px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .list-item-holder {
+    & > p {
+      display: flex;
+      margin: 0;
+    }
+  }
+}

@@ -27,8 +27,8 @@ $skin-yellow: #ffdbac; // kids color
   }
 
   .input-holder {
-    display: flex;
-    justify-content: start;
+     display: flex;
+     justify-content: flex-start;
 
     & > p {
       margin: 4px 50px 20px 10px;
@@ -64,4 +64,5 @@ $skin-yellow: #ffdbac; // kids color
       font-size: 1.65rem;
     }
   }
+
 }

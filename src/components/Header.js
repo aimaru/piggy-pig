@@ -55,6 +55,7 @@ import './Header.scss';
                         {/* <Image src={require('./piggybank.png')} href="/" rounded /> */}
                     <Thumbnail href="/" alt="pig-logo" src={require('../components/img/piggybank.png')} />
                     
+                    
                   </Navbar.Brand>
                 
                 </Navbar.Header>

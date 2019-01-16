@@ -8,8 +8,11 @@ import {
 // import Typing from 'react-typing-animation';
 
 import Login from "../containers/Login";
-import MainPage from "../containers/MainPage";
-// import Transaction from './Transaction';
+import Home from "../containers/Home";
+import TransactionPage from '../containers/TransactionPage';
+import AssignmentPage from '../containers/AssignmentPage';
+import AboutMe from '../containers/AboutMe';
+
 
 // import piggybank from "./img/piggybank.png";
 
@@ -42,8 +45,11 @@ export default class App extends React.Component {
         {/* </Switch> */}
         {/* } */}
 
-        <Route exact path="/" component={MainPage} />
-        <Route exact path="/login" component={Login} />
+        <Route exact path="/" component={Home} />
+        <Route path="/login" component={Login} />
+        <Route path="/transaction" component={TransactionPage} />
+        <Route path="/assignment" component={AssignmentPage} />
+        <Route path="/aboutme" component={AboutMe} />
       </div>
     );
   }

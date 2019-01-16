@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const AssignmentsSchema = new Schema({
+const AssignmentSchema = new Schema({
   description: String,
   price: Number,
   type: String,
   category: String
 });
 
-module.exports = mongoose.model('Assignments', AssignmentsSchema);
+module.exports = mongoose.model('Assignment', AssignmentSchema);

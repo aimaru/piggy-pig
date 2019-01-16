@@ -10,11 +10,13 @@ import "./SideMenu.scss";
 // Icons made by <a href="https://www.flaticon.com/authors/vectors-market">	
 // Icons made by <a href="https://www.flaticon.com/authors/popcorns-arts">
 // Icons made by <a href="https://www.flaticon.com/authors/smashicons">
+// Icons made by <a href="https://www.freepik.com/" title="Freepik">
 // Icons made by <a href="https://www.flaticon.com/authors/dave-gandy">
 import house from "./img/house.svg";
 import transaction from "./img/transaction.svg";
-import mission from "./img/mission.svg";
+import assignment from "./img/assignment.svg";
 import logOut from "./img/log-out.svg";
+import alien from "./img/alien.svg";
 
 const SIDEMENU_ICONS = [
   {
@@ -36,13 +38,21 @@ const SIDEMENU_ICONS = [
   {
     id: 3,
     name: "Uppgifter",
-    img: mission,
-    alt: "mission icon",
-    // link: "/mission",
-    imgClassName: "mission-icon"
+    img: assignment,
+    alt: "assignment icon",
+    // link: "/assignment",
+    imgClassName: "assignment-icon"
   },
   {
     id: 4,
+    name: "Om mig",
+    img: alien,
+    alt: "alien icon",
+    // link: "/assignment",
+    imgClassName: "alien-icon"
+  },
+  {
+    id: 5,
     name: "Loggut",
     img: logOut,
     alt: "logout icon",

@@ -2,6 +2,12 @@ import React from "react";
 import { Col, FormGroup } from "react-bootstrap";
 import "./ChildrenCard.scss";
 
+// Icons made by <a href="https://www.freepik.com/" title="Freepik">
+// import rocket from './img/rocket.svg';
+// Icons made by <a href="https://www.freepik.com/" title="Freepik">/" 	
+import girl from './img/girl.svg';
+
+
 const ChildrenCard = () => (
   // <Col xsOffset={2} xs={8} className="ChildrenCard">
   <Col xs={9} className="ChildrenCard">
@@ -11,9 +17,14 @@ const ChildrenCard = () => (
           className="form-control-file"
           controlId="formControlsFile"
           title="Addera avatar"
+          
         >
+        {/* ロケット写真は後で、入れ替えるできるようにする */}
+        {/* <img src={rocket} alt="Rocket Icon" className="rocket-icon" /> */}
+        <img src={girl} alt="Girl Icon" className="girl-icon" />
           <label>
             <input type="file" name="datafile" id="filesend" />
+                    
             <i className="fas fa-plus-circle fa-2x" />
           </label>
         </FormGroup>

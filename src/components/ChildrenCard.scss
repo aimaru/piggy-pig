@@ -27,6 +27,7 @@ $skin-yellow: #ffdbac; // kids color
     border-radius: 50%;
     cursor: pointer;
     margin: 0 auto;
+    // background-image: url('./img/rocket.svg');
 
     @media only screen and (min-width: 576px) {
       width: 85px;
@@ -73,7 +74,8 @@ $skin-yellow: #ffdbac; // kids color
 
     .fa-plus-circle {
       left: 70px;
-      top: 10px;
+      bottom: 60px;
+      // top: 10px;   // 女の子のアイコンがなければ 、こちら
       position: relative;
       height: 28px;
       width: 30px;
@@ -151,6 +153,12 @@ $skin-yellow: #ffdbac; // kids color
     & > p {
       color: #ee8491;
     }
+  }
+
+  .girl-icon {
+    // margin-top: 15px;  // 女の子のアイコンなしの時はこっち
+    width: 60px !important;
+    margin: 10px 0 5px 11px !important;
   }
 
 }

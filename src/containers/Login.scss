@@ -1,0 +1,27 @@
+.Login {
+  display: flex;
+  margin-top: 200px;
+
+  .holder {
+    text-align: center;
+
+    & > p:nth-child(2) {
+      font-size: 2rem;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    link {
+      font-weight: 800;
+    }
+
+    span {
+      margin: 0 15px;
+      font-weight: 400;
+    }
+  }
+}

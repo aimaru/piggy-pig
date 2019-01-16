@@ -1,45 +1,50 @@
-import React, { Fragment } from 'react';
-import './App.scss';
-import { Switch, Route } from 'react-router-dom';
+import React from "react";
+// import { Thumbnail } from "react-bootstrap";
+import "./App.scss";
+import {
+  Route
+  // //   // ,Switch
+} from "react-router-dom";
 // import Typing from 'react-typing-animation';
-// import { Thumbnail } from 'react-bootstrap';
 
-import Login from '../containers/Login';
-import MainPage from '../containers/MainPage';
-// import Transaction from '../containers/Transaction';
-import SelectChildPage from './SelectChildModal';
+import Login from "../containers/Login";
+import MainPage from "../containers/MainPage";
+// import Transaction from './Transaction';
 
+// import piggybank from "./img/piggybank.png";
 
+export default class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        {/* <Route exact path="/" component={Transaction} /> */}
 
-const App = () => {
-  return(  
+        {/* !!!!!! Add animation later !!!!!!! */}
 
-    <Fragment>
-
-{/* !!!!!! Add animation later !!!!!!! */}
-
-      {/* {
+        {/* {
     this.props.loginStore.isLoading ? */}
-      {/* <div className="App">
+        {/* <div className="App">
         <header className="App-header">
           <Typing className="App-logo">
-            <Thumbnail  href="/" alt="pig-logo" src={require('../img/piggybank.png')} />
+            <Thumbnail  href="/" alt="pig-logo" src={require('../components/img/piggybank-menu2.svg')} />
+           
             <h1>Piggy Pig</h1> 
           </Typing>
         </header>
       </div> */}
-    {/* : */}
-      <Switch>
-        <Route exact path='/' component={MainPage} />
-        <Route path='/login' component={Login} />
-        <Route path='/selectchild' component={SelectChildPage} />
-        {/* <Route path='/transaction' component={Transaction} /> */}
+        {/* : */}
+        {/* <Switch> */}
+        {/* <Route path="/login" component={Login} /> */}
+        {/* <Route path="/transaction" component={Transaction} /> */}
 
-      </Switch>
-    {/* } */}
-      </Fragment>
+        {/* <Redirect to="/" /> */}
+
+        {/* </Switch> */}
+        {/* } */}
+
+        <Route exact path="/" component={MainPage} />
+        <Route exact path="/login" component={Login} />
+      </div>
     );
   }
-
-export default App
-
+}

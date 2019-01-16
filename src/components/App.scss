@@ -1,4 +1,6 @@
-$main-pink: #f5e89b;
+$main-pink: #f59ba6; 
+
+
 
 * {
   margin: 0px;
@@ -10,7 +12,7 @@ html, body {
 }
 
 .App {
-  text-align: center;
+  // text-align: center;
   min-height: 100vh;
 
   .App-header {
@@ -35,19 +37,19 @@ html, body {
     color: #61dafb;
   }
 
-  // @keyframes App-logo-spin {
-  //   from {
-  //     transform: rotate(0deg);
-  //   }
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
 
-  //   to {
-  //     transform: rotate(360deg);
-  //   }
-  // }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 
   img {
     width: 50px;
-    border-radius: 50%;
+    // border-radius: 50%;
     margin: 5px 0 5px 15px;
   }
 
@@ -58,6 +60,8 @@ html, body {
   .thumbnail {
     padding-right: 20px;
     padding-top: 9px;
+    background-color: $main-pink;
+    border: unset; 
   }
  
   

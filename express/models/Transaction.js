@@ -18,7 +18,7 @@ const Transaction = new Schema({
       }
     }
   ],
-  expenditur: [
+  expenditure: [
     {
       user: {
         type: Schema.Types.ObjectId,

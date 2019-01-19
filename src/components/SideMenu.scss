@@ -3,33 +3,34 @@ $main-pink: #f59ba6;
 .SideMenu {
   padding: 0;
   border-right: 1.1px solid $main-pink;
-  
-  // Make the side menu and main contents the same height 
+
+  // Make the side menu and main contents the same height
   padding-bottom: 32768px;
   margin-bottom: -32768px;
   overflow: hidden;
 
-  li {
+  a {
     display: flex;
     align-items: center;
-    margin: 2px 0 0 15px;
+    padding: 2px 0 0 15px;
     font-size: 1.6rem;
     font-weight: 600;
     // color: #708090;
     color: #526b86;
 
     & > span {
-      margin: 22px 0 0 13px;
+      margin: 22px 0 0 15px;
     }
   }
 
   .house-icon,
   .transaction-icon,
-  .mission-icon,
+  .assignment-icon,
+  .alien-icon,
   .logout-icon {
     width: 40px;
     height: 40px;
-    margin: 25px 0 0 5px;
+    // margin: 25px 0 0 5px;
   }
 
   button,
@@ -37,7 +38,13 @@ $main-pink: #f59ba6;
     border: unset;
   }
 
+  .list-group {
+    margin: 20px 0;
+  }
+
   .list-group-item {
-    padding: 0;
+    // padding: 0;
+    border: unset;
+    padding: 8px 5px;
   }
 }

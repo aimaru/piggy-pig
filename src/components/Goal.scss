@@ -5,59 +5,100 @@ $skin-yellow: #ffdbac; // kids color
 .Goal {
   padding: 0;
   margin-top: 25px;
-  max-height: 100vh;
+  // max-height: 100vh;
   z-index: 1;
+  display: flex;
+  margin: 25px auto 0 auto;
+  float: unset;
+  border: 2px solid $water-blue;
+  border-radius: 10px;
 
   .form-group {
     margin-bottom: 10px;
-    border: 2px solid $water-blue;
-    border-radius: 10px;
+    // border: 2px solid $water-blue;
+    // border-radius: 10px;
     padding: 40px 0 20px 45px;
+    width: 100%;
 
-    input {
-      width: 50%;
-    }
-
-    .control-label {
+    & > p {
       color: #526b86;
-      margin-bottom: 7px;
-      font-size: 1.5rem; 
-      font-weight: 600;
-    }
-
-    .input-holder {
-      display: flex;
-      justify-content: start;
-
-      & > p {
-        margin: 4px 50px 20px 10px;
+        margin-bottom: 15px;
+        font-size: 1.5rem;
         font-weight: 600;
-        font-size: 1.7rem;
-        color: #526b86;
-      }
-    }
-
-    button {
-      background-color: #9acd32cf;
-      color: #696969;
-      font-size: 1.65rem;
-      font-weight: 600;
-      box-shadow: 2px 2px 4px #d3d3d3;
-      border: unset;
-    }
-
-    .last-month-result {
-      color: #696969;
-      font-weight: 700;
-      font-size: 1.65rem;
-
-      & ~ span {
-      color: #696969;
-      font-weight: 700;
-      font-size: 1.65rem;
-      }
     }
   }
 
+  .input-holder {
+    display: flex;
+    justify-content: flex-start;
+
+    & > p {
+      margin: 4px 50px 20px 10px;
+      font-weight: 600;
+      font-size: 1.7rem;
+      color: #526b86;
+    }
+  }
+
+  .form-control {
+    border: 2px dotted #9acd32cf;
+    box-shadow: unset;
+    width: 30%;
+  }
+
+  button {
+    background-color: #9acd32cf;
+    color: #696969;
+    font-size: 1.65rem;
+    font-weight: 600;
+    box-shadow: 2px 2px 4px #d3d3d3;
+    border: unset;
+
+    &:hover {
+      background-color: #77a123cf !important;
+      color: #696969;
+    }
+  }
+
+  .last-month-result {
+    color: #696969;
+    font-weight: 700;
+    font-size: 1.65rem;
+
+    & ~ span {
+      color: #696969;
+      font-weight: 700;
+      font-size: 1.65rem;
+    }
+  }
+
+  .stamp {
+    margin: auto;
+  }
+
+  .circle {
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    background-color: #9acd32cf;
+    margin: auto;
+
+  }
+
+  // It appears when the save button is pressed
+  .show-goal {
+    font-size: 2rem;
+    color: #696969;
+    font-weight: 700;
+    margin: 30px 20px;
+
+    & strong {
+      font-weight: 800;
+      font-size: 2.7rem;
+      margin: 1px 10px;
+      color: #9acd32cf;
+    }
+
+  }
 
 }

@@ -3,7 +3,7 @@ import { Grid, Row, Col } from 'react-bootstrap';
 
 import './SelectChildModal.scss';
 import Header from './Header';
-import ChildrenCard from './ChildrenCard';
+import Aggregation from './Aggregation';
 
 
 const SelectChildModal = () => (
@@ -18,8 +18,8 @@ const SelectChildModal = () => (
               <Col xs={12} sm={9} md={10} className="SelectChildPage">
       
       <Col xs={12} className="avatar">
-      <ChildrenCard />
-      <ChildrenCard />
+      <Aggregation />
+      <Aggregation />
       </Col>
       
     </Col>

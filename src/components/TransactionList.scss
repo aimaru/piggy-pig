@@ -1,0 +1,26 @@
+$main-pink: #f59ba6;
+$water-blue: #bdeaee; // color for parents
+$skin-yellow: #ffdbac; // kids color
+$light-green: #cdeac0;;
+
+.TransactionList {
+
+  margin: 0 auto 20px auto;
+  float: unset;
+
+  li > a {
+    font-weight: 700;
+    color: #526b86;
+  }
+
+  .list-group-item:first-child {
+    border-top-left-radius: unset; 
+    border-top-right-radius: unset;
+    border-top: none;
+ }
+
+
+
+  
+
+}

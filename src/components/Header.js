@@ -21,7 +21,7 @@ import './Header.scss';
     //   if(path === '/register') {
     //     this.setState({name: 'Register'});
     //   }
-    //   if(path === '/startPage') {
+    //   if(path === '/') {
     //     this.setState({name: 'Mina sidor'});
     //   }
     //   if(path=== '/mission') {
@@ -54,6 +54,7 @@ import './Header.scss';
                   Piggy Pig  */}
                         {/* <Image src={require('./piggybank.png')} href="/" rounded /> */}
                     <Thumbnail href="/" alt="pig-logo" src={require('../components/img/piggybank.png')} />
+                    
                     
                   </Navbar.Brand>
                 

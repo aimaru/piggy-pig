@@ -1,18 +1,30 @@
 import React from "react";
 import { Col, FormGroup } from "react-bootstrap";
-import "./ChildrenCard.scss";
+import "./Aggregation.scss";
 
-const ChildrenCard = () => (
-  <Col xsOffset={1} xs={10} className="ChildrenCard">
+// Icons made by <a href="https://www.freepik.com/" title="Freepik">
+// import rocket from './img/rocket.svg';
+// Icons made by <a href="https://www.freepik.com/" title="Freepik">/" 	
+import girl from './img/girl.svg';
+
+
+const Aggregation = () => (
+  // <Col xsOffset={2} xs={8} className="Aggregation">
+  <Col xs={9} className="Aggregation">
     <Col xs={3} className="avatar">
       <form>
         <FormGroup
           className="form-control-file"
           controlId="formControlsFile"
           title="Addera avatar"
+          
         >
+        {/* ロケット写真は後で、入れ替えるできるようにする */}
+        {/* <img src={rocket} alt="Rocket Icon" className="rocket-icon" /> */}
+        <img src={girl} alt="Girl Icon" className="girl-icon" />
           <label>
             <input type="file" name="datafile" id="filesend" />
+                    
             <i className="fas fa-plus-circle fa-2x" />
           </label>
         </FormGroup>
@@ -35,8 +47,8 @@ const ChildrenCard = () => (
       </Col>
     </Col>
 
-    <Col xsOffset={1} />
+    {/* <Col xsOffset={2} /> */}
   </Col>
 );
 
-export default ChildrenCard;
+export default Aggregation;

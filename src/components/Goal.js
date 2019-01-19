@@ -10,16 +10,16 @@ import {
 import "./Goal.scss";
 
 const Goal = () => (
-  <Col xsOffset={1} xs={10} className="Goal">
+  <Col xs={9} className="Goal">
   
     <FormGroup controlId="formControlsText">
-      <ControlLabel>Hur mycket vill du intjänade pengar?</ControlLabel>
+      <ControlLabel>Hur mycket vill du intjänade pengar den denna månad?</ControlLabel>
       <div className="input-holder">
       <FormControl
         id="formControlsText"
         type="text"
         label="Text"
-        placeholder="Skriv ditt mål"
+        // placeholder="Skriv ditt mål"
       />
       <p>kr</p>
       <ButtonToolbar>
@@ -27,12 +27,12 @@ const Goal = () => (
       </ButtonToolbar>
       </div>
       <p>
-        * Förra månaden intjänade du <span className="last-month-result">89</span>{" "}
+        * Förra månaden intjänade du <span className="last-month-result">89</span>
         <span>kr</span>.
       </p>
     </FormGroup>
     
-    <Col xsOffset={1} />
+  
   </Col>
 );
 

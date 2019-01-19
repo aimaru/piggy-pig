@@ -3,18 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "connect-mongo": "^2.0.3",
     "express": "^4.16.4",
+    "mongod": "^2.0.0",
+    "mongoose": "^5.4.4",
     "node-sass": "^4.11.0",
     "prettier": "^1.15.3",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-bootstrap": "^0.32.4",
+    "react-datepicker": "^2.0.0",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.2",
     "react-typing-animation": "^1.6.2",
-    "redux": "^4.0.1"
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",

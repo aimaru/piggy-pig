@@ -1,14 +1,11 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const AssignmentsSchema = new Schema({
-  user: {
-    type: Schema.Types.ObjectId,
-    ref: 'User'
-  },
+const AssignmentSchema = new Schema({
   description: String,
-  pris: Number,
+  price: Number,
+  type: String,
   category: String
 });
 
-module.exports = mongoose.model('Assignments', AssignmentsSchema);
+module.exports = mongoose.model('Assignment', AssignmentSchema);

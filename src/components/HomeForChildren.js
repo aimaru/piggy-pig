@@ -1,27 +1,35 @@
 import React, { Fragment } from "react";
 import { Row, Col } from "react-bootstrap";
 
-import "./StartPageForChildren.scss";
-import ChildrenCard from "./ChildrenCard";
-import SelectButton from "./SelectButton";
+import "./HomeForChildren.scss";
+import Aggregation from "./Aggregation";
+// import TransactionModal from "./TransactionModal";
+import AddIncomeModal from "./AddIncomeModal";
+
+// import SelectButton from "./SelectButton";
 import Goal from "./Goal";
 
 // import house from '../components/img/house.svg';
 
-const StartPageForChildren = () => (
+const HomeForChildren = () => (
   <Fragment>
-    <Col xs={12} sm={9} md={10} className="StartPageForChildren">
+    <Col xs={12} sm={9} md={10} className="HomeForChildren">
       
       <Row className="show-grid">
         {/* <Col xs={12} className="avatar"> */}
-          <ChildrenCard />
+          <Aggregation  />
         {/* </Col> */}
       </Row>
 
       <Row className="show-grid">
         {/* <Col xs={12} className="button"> */}
           <h2>Lägg till dagens ... </h2>
-          <SelectButton />
+          {/* <SelectButton /> */}
+          {/* <TransactionModal store={this.props.sotre} /> */}
+        <AddIncomeModal 
+        // store={this.props.sotre} 
+        />
+
         {/* </Col> */}
       </Row>
 
@@ -35,4 +43,4 @@ const StartPageForChildren = () => (
   </Fragment>
 );
 
-export default StartPageForChildren;
+export default HomeForChildren;

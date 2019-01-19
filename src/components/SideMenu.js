@@ -22,6 +22,7 @@ const SIDEMENU_ICONS = [
   {
     id: 1,
     name: "Hem",
+    href: "/",
     img: house,
     alt: "house icon",
     // link: "/",
@@ -30,6 +31,7 @@ const SIDEMENU_ICONS = [
   {
     id: 2,
     name: "Transaktion",
+    href: "/transaction",
     img: transaction,
     // alt: "transaction icon",
     // link: "/transaction",
@@ -38,6 +40,7 @@ const SIDEMENU_ICONS = [
   {
     id: 3,
     name: "Uppgifter",
+    href: "/assignment",
     img: assignment,
     alt: "assignment icon",
     // link: "/assignment",
@@ -46,6 +49,7 @@ const SIDEMENU_ICONS = [
   {
     id: 4,
     name: "Om mig",
+    href: "/aboutme",
     img: alien,
     alt: "alien icon",
     // link: "/assignment",
@@ -54,6 +58,7 @@ const SIDEMENU_ICONS = [
   {
     id: 5,
     name: "Loggut",
+    href: "#",
     img: logOut,
     alt: "logout icon",
     // link: "/logout",
@@ -67,7 +72,7 @@ const SideMenu = () => (
       <ListGroup>
         {SIDEMENU_ICONS.map(i => {
           return (
-            <ListGroupItem key={i.id}>
+            <ListGroupItem key={i.id} href={i.href}>
               {/* <ButtonToolbar className="SelectButton"> */}
               {/* <Button  type="button" className={i.buttonClassName}> */}
                

@@ -8,7 +8,7 @@ import "./Home.scss";
 import Header from "../components/Header";
 import SideMenu from "../components/SideMenu";
 import BottomMenu from "../components/BottomMenu";
-import StartPageForChildren from "../components/StartPageForChildren";
+import HomeForChildren from "../components/HomeForChildren";
 // import Transaction from "../components/Transaction";
 
 export default class Home extends React.Component {
@@ -22,23 +22,11 @@ export default class Home extends React.Component {
           <Grid fluid>
             <Row className="show-grid">
               <Col xs={12} className="main-holder">
-                <SideMenu />
-
-                {/* !!!!! Change the components here by page !!!!!!!
-                
-                *Children
-                  - StartPageForChildren  <StartPageForChildren />
-                  - Transaction <Transaction />
-                  - Assignment <Assignment />
-                */}
-
-                <StartPageForChildren />
-                {/*   <Transaction /> */}
-
-
-
-
-                
+          
+                {/* Components */} 
+                  <SideMenu />
+                  <HomeForChildren />
+                  
               </Col>
             </Row>
           </Grid>
@@ -49,6 +37,8 @@ export default class Home extends React.Component {
         {/* <Row className="show-grid"> */}
         <BottomMenu />
         {/* </Row> */}
+
+        
       </Fragment>
     );
   }

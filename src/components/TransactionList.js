@@ -1,17 +1,17 @@
 import React from "react";
 import { Row, Col, Tabs, Tab, ListGroup, ListGroupItem } from "react-bootstrap";
 
-import "./ListAndChart.scss";
-import ListItem from "./ListItem";
+import "./TransactionList.scss";
+import TransactionItem from "./TransactionItem";
 
-const ListAndChart = () => (
+const TransactionList = () => (
   <Row className="show-grid">
-    <Col xs={9} className="ListAndChart">
+    <Col xs={9} className="TransactionList">
       <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
         <Tab eventKey={1} title="LISTA - hur mycket använt/sparat dina pengar">
           <ListGroup className="list-holder">
             <ListGroupItem>
-              <ListItem />
+              <TransactionItem />
             </ListGroupItem>
           </ListGroup>
         </Tab>
@@ -24,4 +24,4 @@ const ListAndChart = () => (
   </Row>
 );
 
-export default ListAndChart;
+export default TransactionList;

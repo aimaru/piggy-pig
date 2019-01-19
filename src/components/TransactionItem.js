@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { ButtonToolbar, Button, Image } from "react-bootstrap";
-import "./ListItem.scss";
+import "./TransactionItem.scss";
 
 // Icons made by <a href="https://www.flaticon.com/authors/smashicons" 
 // import edit from "./img/edit.svg";
@@ -79,12 +79,12 @@ const TEMPORARY_LIST_ITEM = [
 
 
 
-const ListItem = () => (
+const TransactionItem = () => (
   <Fragment>
     {TEMPORARY_LIST_ITEM.map(i => {
       return (
          
-            <div className="ListItem">
+            <div className="TransactionItem" key={i.id}>
               <div className="list-item-holder">
                 <p>{i.date}</p>
                 <p>{i.item}</p>
@@ -104,4 +104,4 @@ const ListItem = () => (
   </Fragment>
 );
 
-export default ListItem;
+export default TransactionItem;

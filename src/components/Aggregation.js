@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, FormGroup } from "react-bootstrap";
-import "./ChildrenCard.scss";
+import "./Aggregation.scss";
 
 // Icons made by <a href="https://www.freepik.com/" title="Freepik">
 // import rocket from './img/rocket.svg';
@@ -8,9 +8,9 @@ import "./ChildrenCard.scss";
 import girl from './img/girl.svg';
 
 
-const ChildrenCard = () => (
-  // <Col xsOffset={2} xs={8} className="ChildrenCard">
-  <Col xs={9} className="ChildrenCard">
+const Aggregation = () => (
+  // <Col xsOffset={2} xs={8} className="Aggregation">
+  <Col xs={9} className="Aggregation">
     <Col xs={3} className="avatar">
       <form>
         <FormGroup
@@ -51,4 +51,4 @@ const ChildrenCard = () => (
   </Col>
 );
 
-export default ChildrenCard;
+export default Aggregation;

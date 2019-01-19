@@ -3,8 +3,8 @@ import { Row, Col } from "react-bootstrap";
 
 import "./HomeForChildren.scss";
 import Aggregation from "./Aggregation";
-// import TransactionModal from "./TransactionModal";
-import AddIncomeModal from "./AddIncomeModal";
+import TransactionModal from "./TransactionModal";
+// import AddIncomeModal from "./AddIncomeModal";
 
 // import SelectButton from "./SelectButton";
 import Goal from "./Goal";
@@ -25,10 +25,13 @@ const HomeForChildren = () => (
         {/* <Col xs={12} className="button"> */}
           <h2>Lägg till dagens ... </h2>
           {/* <SelectButton /> */}
-          {/* <TransactionModal store={this.props.sotre} /> */}
-        <AddIncomeModal 
-        // store={this.props.sotre} 
-        />
+          <TransactionModal 
+          // store={this.props.sotre}
+           />
+        {/* <AddIncomeModal  
+
+        store={this.props.sotre} 
+        />*/}
 
         {/* </Col> */}
       </Row>

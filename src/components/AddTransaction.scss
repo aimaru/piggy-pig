@@ -1,0 +1,22 @@
+$main-pink: #f59ba6;
+$water-blue: #bdeaee; // color for parents
+$skin-yellow: #ffdbac; // kids color
+
+.AddTransaction {
+  border: 2px solid #bdeaee;
+  border-radius: 10px;
+  margin: 20px auto;
+  float: unset;
+  margin-top: 25px;
+
+  .list-group {
+    display: flex;
+    margin: 20px 0;
+    justify-content: space-around;
+    padding: 0 5px;
+
+    @media only screen and (min-width: 576px) {
+      padding: 0 20px;
+    }
+  }
+}

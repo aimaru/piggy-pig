@@ -1,0 +1,151 @@
+$main-pink: #f59ba6;
+$water-blue: #bdeaee; // color for parents
+$skin-yellow: #ffdbac; // kids color
+
+.AddIncomeModal {
+
+  img {
+    margin: 5px;
+  }
+
+  .savings-icon {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    background-color: #fff;
+  }
+
+  .savings-btn {
+    background-color: #9acd32cf !important;
+
+    &:hover {
+      background-color: #77a123cf !important;
+    }
+  }
+
+  .list-group-item {
+    width: 25%;
+    border: unset;
+    border-radius: 30px;
+    background-color: #ffcc74;
+    box-shadow: 2px 2px 4px #d3d3d3;
+    margin: 20px 8px;
+    font-size: 1.65rem;
+    font-weight: 600;
+    color: #f89174;
+    padding: 0;
+    outline: none;
+
+    @media only screen and (min-width: 576px) {
+      width: 100%;
+    }
+
+    & > span {
+      margin-left: 10px;
+      color: #696969;
+    }
+  }
+}
+
+// Modal
+.modal {
+  .modal-header {
+    border-bottom: unset !important;
+  }
+
+  .modal-body {
+    padding: 30px;
+  }
+
+  h4 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #989ca3;
+    margin-top: 10px;
+
+    & > span {
+      color: #9acd32cf !important;
+      font-weight: 700;
+    }
+  }
+
+  h5 {
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+    color: #526b86;
+  }
+
+  .control-label {
+    color: #526b86;
+  }
+
+  .label-text {
+    font-weight: 400;
+  }
+
+  .add-category {
+    display: flex;
+    color: #f59ba6;
+    margin-top: 5px;
+    cursor: pointer;
+
+    & > i {
+      margin: 4px 5px 0 0;
+    }
+
+    & > p {
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+  }
+
+  .form-group {
+    margin: 25px 0 5px 0;
+  }
+
+  .add-input {
+    margin-top: 0;
+  }
+
+  .input-group-addon:last-child {
+    background-color: #f59ba6;
+
+    & > i {
+      color: #fff;
+    }
+  }
+
+  .modal-footer {
+    border-top: unset;
+    padding: 15px 30px 25px 0;
+
+    button {
+      background-color: #9acd32cf !important;
+      border: unset;
+      font-weight: 600;
+      color: #fff;
+
+      &:hover {
+        background-color: #77a123cf !important;
+        font-weight: 600;
+        color: #fff;
+      }
+
+      &:first-child {
+        background-color: $main-pink !important;
+        border: unset;
+        font-weight: 600;
+        color: #fff;
+        margin-right: 5px;
+
+        &:hover {
+          background-color: #e67d89 !important;
+          font-weight: 600;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

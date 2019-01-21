@@ -2,8 +2,9 @@ import React from "react";
 // import { Thumbnail } from "react-bootstrap";
 import "./App.scss";
 import {
-  Route
-  // //   // ,Switch
+  Route, 
+  // Link
+    // Switch
 } from "react-router-dom";
 // import Typing from 'react-typing-animation';
 
@@ -28,9 +29,18 @@ export default class App extends React.Component {
     this.props.loginStore.isLoading ? */}
         {/* <div className="App">
         <header className="App-header">
-          <Typing className="App-logo">
-            <Thumbnail  href="/" alt="pig-logo" src={require('../components/img/piggybank-menu2.svg')} />
-           
+          <Typing className="App-logo"> */}
+          {/* <Link to="/login"> */}
+          {/* <img
+                  className="pig"
+                 
+                  alt="Pig Icon"
+                  src={piggybank}
+                /> */}
+           {/* </Link> */}
+            {/* <Thumbnail alt="pig-logo" 
+            src={require('../components/img/piggybank-menu2.svg')} />
+         
             <h1>Piggy Pig</h1> 
           </Typing>
         </header>
@@ -42,14 +52,15 @@ export default class App extends React.Component {
 
         {/* <Redirect to="/" /> */}
 
-        {/* </Switch> */}
+        {/* <Switch> */}
         {/* } */}
 
         <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
         <Route path="/transaction" component={TransactionPage} />
         <Route path="/assignment" component={AssignmentPage} />
-        <Route path="/aboutme" component={AboutMe} />
+        <Route path="/aboutme" component={AboutMe} /> 
+
       </div>
     );
   }

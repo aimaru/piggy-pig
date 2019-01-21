@@ -8,7 +8,7 @@ const Transaction = new Schema({
         type: Schema.Types.ObjectId,
         ref: "User"
       },
-      createdAt: {
+      date: {
         type: Date,
         default: Date.now
       },
@@ -24,7 +24,7 @@ const Transaction = new Schema({
         type: Schema.Types.ObjectId,
         ref: "User"
       },
-      createdAt: {
+      date: {
         type: Date,
         default: Date.now
       },

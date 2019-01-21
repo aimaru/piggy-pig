@@ -7,7 +7,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 // import PropTypes from "prop-types";
 
-// import "./TransactionModal.scss";
+// import "./AddTransaction.scss";
 
 
 
@@ -21,25 +21,28 @@ export default class Calendar extends React.Component {
     this.state = {
       startDate: new Date()
     };
-    this.handleChange = this.handleChange.bind(this);
+    // this.handleChange = this.handleChange.bind(this);
   }
  
-  handleChange(date) {
-    this.setState({
-      startDate: date
-    });
-  }
+  // handleChange(date) {
+  //   this.setState({
+  //     startDate: date
+  //   });
+  //   console.log('Calendar', date)
+  // }
  
   render() {
     return (
+      <div className="Calendar">
+      <h5>Datum</h5>
       <DatePicker
-        className="Calendar"
+        // className="Calendar"
         selected={this.state.startDate}
-        onChange={this.handleChange}
+        // onChange={this.handleChange}
       />
+</div>
 
 
-      
 
     );
   }

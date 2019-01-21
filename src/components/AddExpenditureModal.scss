@@ -2,31 +2,17 @@ $main-pink: #f59ba6;
 $water-blue: #bdeaee; // color for parents
 $skin-yellow: #ffdbac; // kids color
 
-.TransactionModal {
-  border: 2px solid #bdeaee;
-  border-radius: 10px;
-  margin: 20px auto;
-  float: unset;
-  margin-top: 25px;
-
+.AddExpenditureModal {
   img {
     margin: 5px;
   }
 
-  .dollar-icon, .savings-icon, .goal-icon {
+  .dollar-icon {
     width: 45px;
     height: 45px;
     border: 1px solid #fff;
     border-radius: 25px;
     background-color: #fff;
-  }
-
-  .savings-btn {
-    background-color: #9acd32cf !important;
-
-    &:hover {
-      background-color: #77a123cf !important;
-    }
   }
 
   .dollar-btn {
@@ -35,29 +21,6 @@ $skin-yellow: #ffdbac; // kids color
     &:hover {
       background-color: #e67d89 !important;
     }
-  }
-
-  .goal-btn {
-    background-color: #ffcc74;
-
-    &:hover {
-      background-color: #f1b03f;
-    }
-  }
-
-  .list-group {
-    display: flex;
-    margin: 20px 0;
-    justify-content: space-around;
-    // padding: 0 20px;
-    padding: 0 5px;
-
-    @media only screen and (min-width: 576px) {
-      // padding: 0 5px;
-      padding: 0 20px;
-
-    }
-
   }
 
   .list-group-item {
@@ -74,12 +37,11 @@ $skin-yellow: #ffdbac; // kids color
     outline: none;
 
     @media only screen and (min-width: 576px) {
-      width: 40%;
+      width: 100%;
     }
 
     & > span {
       margin-left: 10px;
-      
       color: #696969;
     }
   }
@@ -102,7 +64,7 @@ $skin-yellow: #ffdbac; // kids color
     margin-top: 10px;
 
     & > span {
-      color: #9acd32cf !important;
+      color: $main-pink !important;
       font-weight: 700;
     }
   }

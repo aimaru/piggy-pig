@@ -24,7 +24,7 @@ import savings from "./img/savings.svg";
 const initialState = {
   startDate: new Date(),
   price: '',
-  category: 'pocket-money',
+  category: 'Veckopengar',
   // category: '',
   show: true
 };
@@ -78,7 +78,12 @@ class AddIncomeModal extends React.Component {
     category: category
     });
     this.props.setIncomeCategory(category);
+    // console.log('this.props.setIncomeCategory(category)', this.props.setIncomeCategory(category))
+// console.log('category', category);
   }
+
+
+ 
 
   // handleIncomeSubmit(e) {
   //   e.preventDefault();
@@ -147,14 +152,26 @@ class AddIncomeModal extends React.Component {
                   // selected={this.state.category}
                   onChange={this.handleCategoryChange}
                 >
-                  <option value="pocket-money">Veckopengar</option>
-                  <option value="bonus">Bonus</option>
-                  <option value="finish-task">Klarade uppgiften</option>
-                  <option value="other">Ovrig</option>
+                  <option value="Veckopengar">Veckopengar</option>
+                  <option value="Bonus">Bonus</option>
+                  <option value="Klarade uppgiften">Klarade uppgiften</option>
+                  <option value="Ovrig">Ovrig</option>
                 </FormControl>
               </FormGroup>
 
+              <div>
+
+      <p>{this.state.category}</p>
+      
+
+{/* test end */}
+              </div>
+
+
+
+
               <div className="add-category">
+    
                 <i className="fas fa-plus-circle" />
                 <p>Add en ny kategori</p>
               </div>
@@ -176,14 +193,25 @@ AddIncomeModal.propType = {
 };
 
 
-// Dispatch props データをセーブ
+
+// Dispatch props コンポネントのpropsに渡す
+const mapStateToProps = state =>{
+  return{
+    startDate: state.date,
+    price: state.price,
+    category: state.income.category
+  };
+};
+
+
+// Dispatch props コンポネントのpropsに渡す
 const mapDispatchToProps = dispatch =>{
   return{
     setIncomeDate: date => dispatch(actions.setIncomeDate(date)),
     setIncomePrice: price => dispatch(actions.setIncomePrice(price)),
     setIncomeCategory: category => dispatch(actions.setIncomeCategory(category))
-  }
-}
+  };
+};
 
 
 
@@ -191,6 +219,7 @@ const mapDispatchToProps = dispatch =>{
 
 
 export default connect(
-  null,
+  // null,
+  mapStateToProps,
   mapDispatchToProps
   )(AddIncomeModal);

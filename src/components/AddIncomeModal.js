@@ -6,32 +6,26 @@ import {
   FormControl,
   Button
 } from "react-bootstrap";
+import FieldGroup from "./FieldGroup";
+import "./AddIncomeModal.scss";
 import PropTypes from "prop-types";
 import { connect } from 'react-redux';
 import * as actions from '../actions/actions';
 
-// import Calendar from "./Calendar";
-import FieldGroup from "./FieldGroup";
+// Calendar
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-import "./AddIncomeModal.scss";
-
-
-
-// Icons made by <a href="https://www.flaticon.com/authors/photo3idea-studio">
-// Icons made by <a href="https://www.flaticon.com/authors/twitter">
 // Icons made by <a href="https://www.freepik.com/">
-// Icons made by <a href="https://www.flaticon.com/authors/itim2101">
 import savings from "./img/savings.svg";
 
-// import { setIncomeDate, setIncomePrice, setIncomeCategory } from "../actions/actions";
+
 
 const initialState = {
   startDate: new Date(),
   price: '',
   category: 'pocket-money',
-
+  // category: '',
   show: true
 };
 console.log('initialState:', initialState)
@@ -50,13 +44,14 @@ class AddIncomeModal extends React.Component {
 
     this.state = initialState;
   }
-
-  handleClose() {
-    this.setState({ show: false });
-  }
+ 
 
   handleShow() {
     this.setState({ show: true });
+  }
+
+  handleClose() {
+    this.setState({ show: false });
   }
  
   handleDateChange(date) {
@@ -64,22 +59,25 @@ class AddIncomeModal extends React.Component {
       startDate: date
     });
     this.props.setIncomeDate(date);
-    console.log('default dag (before):', date);
-    console.log('vilken dag idag? (after):', date);
+      console.log('date: ', date);
+    console.log('this.props.setIncomeDate(date)', this.props.setIncomeDate(date))
   }
 
   handlePriceChange(e) {
+    const price = e.target.value;
     this.setState({
-      price: e.target.value
+      price: price
     });
-    console.log("price", e.target.value);
+    this.props.setIncomePrice(price);
+    console.log("price", price);
   }
 
   handleCategoryChange(e) {
+    const category = e.target.value;
     this.setState({
-      category: e.target.value
+    category: category
     });
-    console.log("category", e.target.value);
+    this.props.setIncomeCategory(category);
   }
 
   // handleIncomeSubmit(e) {
@@ -125,8 +123,6 @@ class AddIncomeModal extends React.Component {
         />
       </div>
 
-
-
             {/* Input price */}
             <FieldGroup
               id="formControlsText"
@@ -134,15 +130,13 @@ class AddIncomeModal extends React.Component {
               label="Pris"
               placeholder="Hur mycket pengar har du fått (skriv bara siffror) ?"
               onChange={this.handlePriceChange}
-              // value={price}
-              // onChange={e => store.dispatch(setIncomePrice(e.target.value))}
             />
 
             {/* Choose category */}
             <form>
               <FormGroup controlId="formControlsSelect">
                 <ControlLabel>
-                  Kategorier{" "}
+                  Kategorier
                   <span className="label-text">
                     (välj kategori som du tjänat pengar)
                   </span>
@@ -150,6 +144,7 @@ class AddIncomeModal extends React.Component {
                 <FormControl
                   componentClass="select"
                   placeholder="Välj kategori, vilka pengar du tjänat ?"
+                  // selected={this.state.category}
                   onChange={this.handleCategoryChange}
                 >
                   <option value="pocket-money">Veckopengar</option>
@@ -184,9 +179,13 @@ AddIncomeModal.propType = {
 // Dispatch props データをセーブ
 const mapDispatchToProps = dispatch =>{
   return{
-    setIncomeDate: date => dispatch(actions.setIncomeDate(date))
+    setIncomeDate: date => dispatch(actions.setIncomeDate(date)),
+    setIncomePrice: price => dispatch(actions.setIncomePrice(price)),
+    setIncomeCategory: category => dispatch(actions.setIncomeCategory(category))
   }
 }
+
+
 
 
 

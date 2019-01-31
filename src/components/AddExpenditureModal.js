@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 
 // import { connect } from 'react-redux';
 
-import Calendar from "./Calendar";
+// import Calendar from "./Calendar";
 import FieldGroup from "./FieldGroup";
 import "./AddExpenditureModal.scss";
 
@@ -32,7 +32,7 @@ class AddExpenditureModal extends React.Component {
 
     this.handleShow = this.handleShow.bind(this);
     this.handleClose = this.handleClose.bind(this);
-    this.handleChangePrice = this.handleChangePrice.bind(this);
+    this.handlePriceChange = this.handlePriceChange.bind(this);
 
     this.state = {
       show: false
@@ -49,7 +49,7 @@ class AddExpenditureModal extends React.Component {
     this.setState({ show: true });
   }
 
-  handleChangePrice(e) {
+  handlePriceChange(e) {
     this.setState({
       value: e.target.value
     });
@@ -78,7 +78,7 @@ class AddExpenditureModal extends React.Component {
           <Modal.Body>
 
             {/* Calendar component */}
-            <Calendar />
+            {/* <Calendar /> */}
 
             {/* Input price */}
             <FieldGroup
@@ -86,7 +86,7 @@ class AddExpenditureModal extends React.Component {
               type="text"
               label="Pris"
               placeholder="Hur mycket pengar har du fått (skriv bara siffror) ?"
-              onChange={this.handleChangePrice}
+              onChange={this.handlePriceChange}
               // value={price}
               // onChange={e => store.dispatch(setIncomePrice(e.target.value))}
             />

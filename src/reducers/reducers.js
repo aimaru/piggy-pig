@@ -11,7 +11,7 @@ const initialState = {
 
   income: {
     date: "",
-    price: "",
+    price: 0,
     category: ""
   },
   incomeItems: {
@@ -31,6 +31,7 @@ const incomeReducer = (state = initialState.income, action) => {
       return {
         ...state,
         price: action.price
+
       };
     case SET_INCOME_CATEGORY:
       return {

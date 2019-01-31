@@ -6,30 +6,27 @@ import {
   FormControl,
   Button
 } from "react-bootstrap";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import * as actions from "../actions/actions";
+// import axios from "axios";
+
 import FieldGroup from "./FieldGroup";
 import "./AddIncomeModal.scss";
-import PropTypes from "prop-types";
-import { connect } from 'react-redux';
-import * as actions from '../actions/actions';
-
 // Calendar
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
 // Icons made by <a href="https://www.freepik.com/">
 import savings from "./img/savings.svg";
 
-
-
 const initialState = {
-  startDate: new Date(),
-  price: '',
-  category: 'Veckopengar',
+  date: new Date(),
+  price: "",
+  category: "Veckopengar",
   // category: '',
   show: true
 };
-console.log('initialState:', initialState)
-
+console.log("initialState:", initialState);
 
 class AddIncomeModal extends React.Component {
   constructor(props) {
@@ -40,11 +37,10 @@ class AddIncomeModal extends React.Component {
     this.handleDateChange = this.handleDateChange.bind(this);
     this.handlePriceChange = this.handlePriceChange.bind(this);
     this.handleCategoryChange = this.handleCategoryChange.bind(this);
-    // this.handleIncomeSubmit = this.handleIncomeSubmit.bind(this);
+    this.handleIncomeSubmit = this.handleIncomeSubmit.bind(this);
 
     this.state = initialState;
   }
- 
 
   handleShow() {
     this.setState({ show: true });
@@ -53,48 +49,85 @@ class AddIncomeModal extends React.Component {
   handleClose() {
     this.setState({ show: false });
   }
- 
+
+  // handleDateChange(date) {
+  //   this.setState({
+  //     date: date
+  //   });
+  //   this.props.setIncomeDate(date);
+  //   console.log("date: ", date);
+  // }
+
   handleDateChange(date) {
+    // const date = e.target.value;
     this.setState({
-      startDate: date
+      date: date
     });
-    this.props.setIncomeDate(date);
-      console.log('date: ', date);
-    console.log('this.props.setIncomeDate(date)', this.props.setIncomeDate(date))
+    this.props.setIncomeDate(date); 
+    console.log("date", date);
   }
 
+ 
   handlePriceChange(e) {
     const price = e.target.value;
     this.setState({
       price: price
     });
     this.props.setIncomePrice(price);
-    console.log("price", price);
+    console.log("price2222222222", price);
+    console.log('this.props.setIncomePrice(price);', this.props.setIncomePrice(price));
+    
   }
 
   handleCategoryChange(e) {
     const category = e.target.value;
     this.setState({
-    category: category
+      category: category
     });
     this.props.setIncomeCategory(category);
     // console.log('this.props.setIncomeCategory(category)', this.props.setIncomeCategory(category))
-// console.log('category', category);
+    console.log('category', category);
   }
 
+  handleIncomeSubmit = e => {
+    e.preventDefault();
 
- 
+    // const { date, price, category } = this.state;
+    // console.log('this.state', this.state)
 
-  // handleIncomeSubmit(e) {
-  //   e.preventDefault();
-  //   const {
-  //     date, price, category  
-  //   } = this.state;
-  //   // const { user } = this.props;
-  // }
+const { date, price, category } = this.state;
+// const { setIncomeDate } = this.props;
+
+console.log('date: ', date)
+console.log('price: ', price)
+console.log('category: ', category)
 
 
 
+    // axios.post('/api/incomes', {
+
+
+      // date,
+      // price,
+      // category
+    // })
+    // .then(res => {
+    //  console.log('!!!res: ', res)
+      // submit語はフォームを初期化
+      // ここで、initializIncomeを初期化
+      // initializeIncome()...
+      
+      // ‼!!!!!!!!!!!!! ここでエラー!!!!!!!!!
+      // setIncomeDate(res.data);
+
+
+  //   })
+  //   .catch(err => {
+  //     console.error(new Error(err))
+  //   })
+
+  this.handleClose()
+  }
 
   render() {
     return (
@@ -115,18 +148,17 @@ class AddIncomeModal extends React.Component {
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
-
             {/* Calendar component */}
             {/* <Calendar /> */}
 
             <div className="Calendar">
-        <h5>Datum</h5>
-        <DatePicker
-          // className="Calendar"
-          selected={this.state.startDate}
-          onChange={this.handleDateChange}
-        />
-      </div>
+              <h5>Datum</h5>
+              <DatePicker
+                // className="Calendar"
+                selected={this.state.date}
+                onChange={this.handleDateChange}
+              />
+            </div>
 
             {/* Input price */}
             <FieldGroup
@@ -159,19 +191,13 @@ class AddIncomeModal extends React.Component {
                 </FormControl>
               </FormGroup>
 
-              <div>
-
+              {/* test start */}
+              {/* <div>
       <p>{this.state.category}</p>
-      
-
 {/* test end */}
-              </div>
-
-
-
+              {/*   </div> */}
 
               <div className="add-category">
-    
                 <i className="fas fa-plus-circle" />
                 <p>Add en ny kategori</p>
               </div>
@@ -179,7 +205,9 @@ class AddIncomeModal extends React.Component {
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.handleClose}>Avbryt</Button>
-            <Button type="submit" onClick={this.handleIncomeSubmit}>Spara</Button>
+            <Button type="submit" onClick={this.handleIncomeSubmit}>
+              Spara
+            </Button>
           </Modal.Footer>
         </Modal>
       </div>
@@ -192,34 +220,26 @@ AddIncomeModal.propType = {
   handleClose: PropTypes.func.isRequired
 };
 
-
-
-// Dispatch props コンポネントのpropsに渡す
-const mapStateToProps = state =>{
-  return{
-    startDate: state.date,
+// State props コンポネントのpropsに渡す
+const mapStateToProps = state => {
+  return {
+    date: state.date,
     price: state.price,
     category: state.income.category
   };
 };
 
-
 // Dispatch props コンポネントのpropsに渡す
-const mapDispatchToProps = dispatch =>{
-  return{
+const mapDispatchToProps = dispatch => {
+  return {
     setIncomeDate: date => dispatch(actions.setIncomeDate(date)),
     setIncomePrice: price => dispatch(actions.setIncomePrice(price)),
     setIncomeCategory: category => dispatch(actions.setIncomeCategory(category))
   };
 };
 
-
-
-
-
-
 export default connect(
   // null,
   mapStateToProps,
   mapDispatchToProps
-  )(AddIncomeModal);
+)(AddIncomeModal);

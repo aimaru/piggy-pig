@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, FormGroup } from "react-bootstrap";
+import { connect } from "react-redux";
 import "./Aggregation.scss";
 
 // Icons made by <a href="https://www.freepik.com/" title="Freepik">
@@ -8,7 +9,26 @@ import "./Aggregation.scss";
 import girl from './img/girl.svg';
 
 
-const Aggregation = () => (
+const initialState = {
+  totalIncome: "",
+};
+
+
+
+// const Aggregation = (props) => (
+  class Aggregation extends React.Component {
+constructor(props) {
+  super(props);
+
+  this.state = initialState;
+}
+
+render() {
+  console.log('this.props.price', this.props.price);
+  
+  return (
+
+
   // <Col xsOffset={2} xs={8} className="Aggregation">
   <Col xs={9} className="Aggregation">
     <Col xs={3} className="avatar">
@@ -35,20 +55,40 @@ const Aggregation = () => (
     <Col xs={9} className="amount-holder">
       <Col xs={12} className="amount">
         <p>Saldo</p>
-        <p>789 kr</p>
+        <p>0<span>kr</span></p>
       </Col>
       <Col xs={12} className="income">
         <p>Totala inkomst denna månad</p>
-        <p>+456 kr</p>
+        <p>+ 
+          <span> {this.props.price} </span>kr</p>
       </Col>
       <Col xs={12} className="expenditure">
         <p>Totala utgifter denna månad</p>
-        <p className="">-123 kr</p>
+        <p className="">- <span>0</span> kr</p>
       </Col>
     </Col>
+
+  
+ 
 
     {/* <Col xsOffset={2} /> */}
   </Col>
 );
+  }
+}
 
-export default Aggregation;
+
+
+
+// Receive state as props
+const mapStateToProps = state => {
+  return {
+    startDate: state.date,
+    price: state.income.price,
+    category: state.income.category
+  };
+};
+
+export default connect(
+  mapStateToProps
+)(Aggregation);

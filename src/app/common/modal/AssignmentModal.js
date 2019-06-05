@@ -12,21 +12,19 @@ import PropTypes from "prop-types";
 
 // import Calendar from "./Calendar";
 import FieldGroup from "./FieldGroup";
-import "./AddExpenditureModal.scss";
-
-// import {connect} from 'react-redux';
+import "./AssignmentModal.scss";
 
 // Icons made by <a href="https://www.flaticon.com/authors/photo3idea-studio">
 // Icons made by <a href="https://www.flaticon.com/authors/twitter">
 // Icons made by <a href="https://www.freepik.com/">
 // Icons made by <a href="https://www.flaticon.com/authors/itim2101">
-// import goal from "./img/goal.svg";
+import goal from "../img/goal.svg";
 // import savings from "./img/savings.svg";
-import dollar from "./img/dollar.svg";
+// import dollar from "./img/dollar.svg";
 
 // import { setIncomeDate, setIncomePrice, setIncomeCategory } from "../actions/actions";
 
-class AddExpenditureModal extends React.Component {
+class AssignmentModal extends React.Component {
   constructor(props, context) {
     super(props, context);
 
@@ -58,11 +56,10 @@ class AddExpenditureModal extends React.Component {
 
   render() {
     return (
-      <div className="AddExpenditureModal">
-       
-        <div className="dollar-btn list-group-item" onClick={this.handleShow}>
-          <img className="dollar-icon" alt="dollar icon" src={dollar} />
-          <span>Använda pengar</span>
+      <div className="AssignmentModal">
+        <div className="goal-btn list-group-item " onClick={this.handleShow}>
+          <img className="goal-icon" alt="goal icon" src={goal} />
+          <span>Färdiga uppgifter</span>
         </div>
 
         <Modal
@@ -72,7 +69,7 @@ class AddExpenditureModal extends React.Component {
         >
           <Modal.Header closeButton>
             <Modal.Title>
-              Lägg till <span>använda pengar</span>
+              Lägg till <span>Färdiga uppgifter</span>
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
@@ -127,9 +124,10 @@ class AddExpenditureModal extends React.Component {
   }
 }
 
-AddExpenditureModal.propType = {
+
+AssignmentModal.propType = {
   handleShow: PropTypes.func.isRequired,
   handleClose: PropTypes.func.isRequired
 };
 
-export default AddExpenditureModal;
+export default AssignmentModal;

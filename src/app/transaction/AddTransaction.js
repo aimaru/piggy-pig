@@ -2,9 +2,9 @@ import React from "react";
 import { Col } from "react-bootstrap";
 import PropTypes from "prop-types";
 
-import AddIncomeModal from "./AddIncomeModal";
-import AddExpenditureModal from "./AddExpenditureModal";
-import AddAssignmentModal from "./AddAssignmentModal";
+import IncomeModal from "../common/modal/IncomeModal";
+import ExpenditureModal from "../common/modal/ExpenditureModal";
+import AssignmentModal from "../common/modal/AssignmentModal";
 
 import "./AddTransaction.scss";
 
@@ -39,9 +39,9 @@ export default class AddTransaction extends React.Component {
         <div className="list-group">
 
           {/* Components */}
-          <AddIncomeModal />
-          <AddExpenditureModal />
-          <AddAssignmentModal />
+          <IncomeModal />
+          <ExpenditureModal />
+          <AssignmentModal />
 
         </div>
       </Col>

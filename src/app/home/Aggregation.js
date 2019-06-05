@@ -6,7 +6,7 @@ import "./Aggregation.scss";
 // Icons made by <a href="https://www.freepik.com/" title="Freepik">
 // import rocket from './img/rocket.svg';
 // Icons made by <a href="https://www.freepik.com/" title="Freepik">/" 	
-import girl from './img/girl.svg';
+import girl from '../common/img/girl.svg';
 
 
 const initialState = {

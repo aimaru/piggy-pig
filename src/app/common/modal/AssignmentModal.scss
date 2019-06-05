@@ -2,12 +2,13 @@ $main-pink: #f59ba6;
 $water-blue: #bdeaee; // color for parents
 $skin-yellow: #ffdbac; // kids color
 
-.AddExpenditureModal {
+.AssignmentModal {
+ 
   img {
     margin: 5px;
   }
 
-  .dollar-icon {
+    .goal-icon {
     width: 45px;
     height: 45px;
     border: 1px solid #fff;
@@ -15,11 +16,11 @@ $skin-yellow: #ffdbac; // kids color
     background-color: #fff;
   }
 
-  .dollar-btn {
-    background-color: $main-pink !important;
+  .goal-btn {
+    background-color: #ffcc74;
 
     &:hover {
-      background-color: #e67d89 !important;
+      background-color: #f1b03f;
     }
   }
 
@@ -42,6 +43,7 @@ $skin-yellow: #ffdbac; // kids color
 
     & > span {
       margin-left: 10px;
+      
       color: #696969;
     }
   }
@@ -64,7 +66,7 @@ $skin-yellow: #ffdbac; // kids color
     margin-top: 10px;
 
     & > span {
-      color: $main-pink !important;
+      color: #9acd32cf !important;
       font-weight: 700;
     }
   }

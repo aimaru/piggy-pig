@@ -8,7 +8,7 @@ import "./Home.scss";
 import Header from "../components/Header";
 import SideMenu from "../components/SideMenu";
 import BottomMenu from "../components/BottomMenu";
-import HomeForChildren from "../components/HomeForChildren";
+import HomeForChildren from "../app/home/HomeForChildren";
 // import Transaction from "../components/Transaction";
 
 export default class Home extends React.Component {

@@ -11,7 +11,7 @@ import { connect } from "react-redux";
 import * as actions from "../../../actions/actions";
 // import axios from "axios";
 
-import FieldGroup from "./FieldGroup";
+import FieldGroup from "../FieldGroup";
 import "./IncomeModal.scss";
 // Calendar
 import DatePicker from "react-datepicker";

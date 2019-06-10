@@ -11,7 +11,7 @@ import PropTypes from "prop-types";
 // import { connect } from 'react-redux';
 
 // import Calendar from "./Calendar";
-import FieldGroup from "./FieldGroup";
+import FieldGroup from "../FieldGroup";
 import "./ExpenditureModal.scss";
 
 // import {connect} from 'react-redux';

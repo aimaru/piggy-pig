@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Row, Navbar, Thumbnail } from 'react-bootstrap';
 
 import './Header.scss';
-// import pig-logo from '../../img/piggybank.png';
+// import pig-logo from './img/piggybank.png';
 // import PropTypes from 'prop-types';
 
 // export default class Header extends React.Component {
@@ -50,10 +50,10 @@ import './Header.scss';
 
                     
                     {/* <a href="/">Piggy pig</a>
-                    <img  src={require('/.piggybank.png')} alt="pig-logo" />
+                    <img  src={require('./img/piggybank.png')} alt="pig-logo" />
                   Piggy Pig  */}
-                        {/* <Image src={require('./piggybank.png')} href="/" rounded /> */}
-                    <Thumbnail href="/" alt="pig-logo" src={require('../components/img/piggybank.png')} />
+                        {/* <Image src={require('./img/piggybank.png')} href="/" rounded /> */}
+                    <Thumbnail href="/" alt="pig-logo" src={require('./img/piggybank.png')} />
                     
                     
                   </Navbar.Brand>

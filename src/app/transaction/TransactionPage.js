@@ -2,9 +2,9 @@ import React, { Fragment} from "react";
 import { Grid, Row, Col } from "react-bootstrap";
 
 // import "./TransactionPage.scss";
-import Header from "../../components/Header";
-import SideMenu from "../../components/SideMenu";
-import BottomMenu from "../../components/BottomMenu";
+import Header from "../common/Header";
+import SideMenu from "../common/SideMenu";
+import BottomMenu from "../common/BottomMenu";
 import Transaction from "../transaction/Transaction";
 
 // import Aggregation from "./Aggregation";

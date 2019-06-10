@@ -3,7 +3,7 @@ import { Row, Col } from "react-bootstrap";
 
 import Aggregation from "./Aggregation";
 import AddTransaction from "../transaction/AddTransaction";
-import Goal from "../../components/Goal";
+import Goal from "./Goal";
 import "./HomeForChildren.scss";
 
 const HomeForChildren = () => (

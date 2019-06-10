@@ -8,11 +8,11 @@ import {
 } from "react-router-dom";
 // import Typing from 'react-typing-animation';
 
-import Login from "../containers/Login";
+import Login from "../app/register/Login";
 import Home from "../containers/Home";
-import TransactionPage from '../containers/TransactionPage';
-import AssignmentPage from '../containers/AssignmentPage';
-import AboutMe from '../containers/AboutMe';
+import TransactionPage from '../app/transaction/TransactionPage';
+import AssignmentPage from '../app/assignment/AssignmentPage';
+import AboutMe from '../app/about/AboutMe';
 
 
 // import piggybank from "./img/piggybank.png";

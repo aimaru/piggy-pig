@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { Row, Col } from "react-bootstrap";
 
 import Aggregation from "./Aggregation";
-import AddTransaction from "./AddTransaction";
+import AddTransaction from "../transaction/AddTransaction";
 import Goal from "./Goal";
 import "./HomeForChildren.scss";
 

@@ -2,7 +2,7 @@ import React, { Fragment} from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
 
 import './SelectChildModal.scss';
-import Header from './Header';
+import Header from '../../../components/Header';
 import Aggregation from './Aggregation';
 
 

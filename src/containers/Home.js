@@ -5,10 +5,10 @@ import { Grid, Row, Col } from "react-bootstrap";
 import "./Home.scss";
 
 
-import Header from "../components/Header";
-import SideMenu from "../components/SideMenu";
-import BottomMenu from "../components/BottomMenu";
-import HomeForChildren from "../components/HomeForChildren";
+import Header from "../app/common/Header";
+import SideMenu from "../app/common/SideMenu";
+import BottomMenu from "../app/common/BottomMenu";
+import HomeForChildren from "../app/home/HomeForChildren";
 // import Transaction from "../components/Transaction";
 
 export default class Home extends React.Component {

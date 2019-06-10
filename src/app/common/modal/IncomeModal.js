@@ -8,16 +8,16 @@ import {
 } from "react-bootstrap";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import * as actions from "../actions/actions";
+import * as actions from "../../../actions/actions";
 // import axios from "axios";
 
-import FieldGroup from "./FieldGroup";
-import "./AddIncomeModal.scss";
+import FieldGroup from "../FieldGroup";
+import "./IncomeModal.scss";
 // Calendar
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 // Icons made by <a href="https://www.freepik.com/">
-import savings from "./img/savings.svg";
+import savings from "../img/savings.svg";
 
 const initialState = {
   date: new Date(),
@@ -28,7 +28,7 @@ const initialState = {
 };
 console.log("initialState:", initialState);
 
-class AddIncomeModal extends React.Component {
+class IncomeModal extends React.Component {
   constructor(props) {
     super(props);
 
@@ -131,7 +131,7 @@ console.log('category: ', category)
 
   render() {
     return (
-      <div className="AddIncomeModal">
+      <div className="IncomeModal">
         <div className="savings-btn list-group-item" onClick={this.handleShow}>
           <img className="savings-icon" alt="piggy bank icon" src={savings} />
           <span>Intjänade penga </span>
@@ -215,7 +215,7 @@ console.log('category: ', category)
   }
 }
 
-AddIncomeModal.propType = {
+IncomeModal.propType = {
   handleShow: PropTypes.func.isRequired,
   handleClose: PropTypes.func.isRequired
 };
@@ -242,4 +242,4 @@ export default connect(
   // null,
   mapStateToProps,
   mapDispatchToProps
-)(AddIncomeModal);
+)(IncomeModal);

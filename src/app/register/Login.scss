@@ -1,27 +1,155 @@
 .Login {
   display: flex;
-  margin-top: 200px;
+  min-height: 100vh;
+  background: url(../common/img/background-pattern-2.svg);
 
-  .holder {
+  h2 {
+    color: #696969;
+    font-size: 1.7rem;
+    margin-top: 30px;
+    text-align: left;
+
+    @media screen and (min-width: 768px) {
+      font-size: 2rem;
+    }
+
+    @media screen and (min-width: 992px) {
+      margin-top: 15px;
+    }
+  }
+
+  .nav-tabs {
+    display: flex;
+    background-color: white;
+    border-color: white;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    font-size: 1.2rem;
+
+    @media screen and (min-width: 768px) {
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media screen and (min-width: 960px) {
+      padding: 10px 0;
+      font-size: inherit;
+    }
+
+    li {
+      width: 50%;
+      border-bottom: 1px solid #f59ba6;
+
+      &.active > a {
+        border: inherit;
+        display: block;
+        border-bottom: 2px solid #f59ba6;
+        padding: 10px 0;
+        color: #f59ba6;
+      }
+    }
+
+    a {
+      font-size: 1.2 rem;
+      font-weight: 600;
+      color: #f59ba6;
+      padding: 10px 0;
+
+      @media screen and (min-width: 768px) {
+        font-size: 1.6rem;
+        padding: 10px 0;
+      }
+
+      &:hover,
+      &:focus {
+        transform: scale(1.05);
+        background-color: unset;
+        outline-color: transparent;
+        border: unset;
+      }
+    }
+  }
+
+  .tab-content {
+    max-width: 300px;
+    margin: auto;
+  }
+
+  .form-group {
+    margin-bottom: 5px;
+  }
+
+  .form-control {
+    font-size: 1.1rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .btn-toolbar {
+    margin-left: -5px;
+    margin-right: 5px;
+  }
+
+  .login__wrapper {
     text-align: center;
+    border: 3px solid #f59ba6;
+    border-radius: 25px;
+    background-color: white;
+    margin: auto;
+    max-width: 300px;
+
+    @media screen and (min-width: 768px) {
+      max-width: 500px;
+    }
 
     & > p:nth-child(2) {
       font-size: 2rem;
       font-weight: 400;
     }
+  }
 
-    p {
-      font-size: 3rem;
-      font-weight: 700;
-    }
+  .login__tabs {
+    padding: 0 10px;
+    min-height: 405px;
 
-    link {
-      font-weight: 800;
+    @media screen and (min-width: 768px) {
+      padding: 0 80px;
+      min-height: 430px;
     }
+  }
 
-    span {
-      margin: 0 15px;
-      font-weight: 400;
+  .login__button {
+    background-color: #9acd32cf !important;
+    border: unset;
+    font-weight: 600;
+    color: #fff;
+    width: 100%;
+  }
+
+  .login__forgot-psw {
+    font-weight: 600;
+    text-align: left;
+    margin: 10px 0 35px;
+    font-size: 1.2rem;
+
+    a {
+      color: #8fd1d5;
+
+      &:hover {
+        text-decoration: none;
+        color: #337ab7;
+      }
     }
+  }
+
+  .login__remember-me label {
+    font-weight: 600;
+    color: #696969;
+    font-size: 1.2rem;
+    float: left;
+    margin-bottom: 40px;
   }
 }

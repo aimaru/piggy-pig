@@ -1,8 +1,7 @@
 import React from 'react';
-import { Grid, Row, Navbar, Thumbnail } from 'react-bootstrap';
+import { Image } from 'react-bootstrap';
 
 import './Header.scss';
-// import pig-logo from './img/piggybank.png';
 // import PropTypes from 'prop-types';
 
 // export default class Header extends React.Component {
@@ -33,47 +32,14 @@ import './Header.scss';
     // }
 
   const Header = () => (
-   
-  // render() {
-  //   return (
-      <header className="Header"> 
-        <Grid fluid>
-          <Row className="show-grid">
-
-            {/* <Col xs={12}> */}
-
-              <Navbar>
-              <h1>Home</h1>
-                <Navbar.Header >
-                {/* <h1>Home</h1> */}
-                  <Navbar.Brand>
-
-                    
-                    {/* <a href="/">Piggy pig</a>
-                    <img  src={require('./img/piggybank.png')} alt="pig-logo" />
-                  Piggy Pig  */}
-                        {/* <Image src={require('./img/piggybank.png')} href="/" rounded /> */}
-                    <Thumbnail href="/" alt="pig-logo" src={require('./img/piggybank.png')} />
-                    
-                    
-                  </Navbar.Brand>
-                
-                </Navbar.Header>
-                {/* <Nav className="text-center">
-                  <NavItem eventKey={1} href="#">
-                    Home
-                  </NavItem>
-                </Nav> */}
-              </Navbar>   
-
-            {/* </Col> */}
-          </Row>
-        </Grid>
+    <header className="Header"> 
+      <h1>Home</h1>
+      <div>         
+        <a href="/">
+          <Image  src={require('./img/piggybank.png')} alt="piggybank-logo" />
+        </a>
+      </div>        
     </header>       
-  //   );
-  // }
-
-// }
 )
 
 export default Header

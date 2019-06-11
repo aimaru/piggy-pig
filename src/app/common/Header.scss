@@ -1,49 +1,47 @@
-$main-pink: #f59ba6;
+$theme-pink: #f59ba6;
 
 .Header {
+  height: 50px;
+  width: 100%;
+  background-color: $theme-pink;
+  border-radius: unset;
+  margin-bottom: unset;
 
-  
-  
-  h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #fff;
-    margin-top: 15px;
+  @media screen and (min-width: 768px) {
+    height: 55px;
   }
 
-  nav {
-    background-color: $main-pink;
-    border-radius: unset;
-    height: 65px;
-    margin-bottom: unset;
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    margin: 0;
+    padding-top: 13px;
 
-    .container {
-      min-width: 100%;
+    @media screen and (min-width: 768px) {
+      font-size: 2.5rem;
     }
+  }
 
-    .navbar-header {
-      position: absolute;
-      top: 5px;
+  img {
+    width: 37px;
+    border: 1px solid #f59ba6;
+    border-radius: 75%;
+    background-color: #fff;
+    margin: 3px 0 5px 0;
+    position: absolute;
+    top: 4px;
+    left: 10px;
+
+    @media screen and (min-width: 768px) {
+      width: 45px;
+      left: 20px;
+      top: 2px;
     }
+  }
 
-    .navbar-brand {
-      padding: 2px 5px;
-      margin-left: 0 !important;
-      border: unset;
-      background-color: transparent;
-
-      img {
-        width: 45px;
-        border: 1px solid $main-pink;
-        border-radius: 75%;
-        background-color: #fff;
-        margin: 3px 0 5px 0;
-      }
-
-      a {
-        background: unset;
-        border: unset;
-      }
-    }
+  a {
+    background: unset;
+    border: unset;
   }
 }

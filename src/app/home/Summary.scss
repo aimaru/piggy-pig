@@ -1,28 +1,45 @@
-$main-pink: #f59ba6;
+$theme-pink: #f59ba6;
 $water-blue: #bdeaee; // color for parents
 $skin-yellow: #ffdbac; // kids color
 
-.Aggregation {
-  // margin-bottom: 20px;
-  border: 2px solid $water-blue;
-  border-radius: 10px;
+@mixin summary {
+  margin: 10px 15px 0;
+  padding: 0 10px;
   display: flex;
-  margin: 0 auto 20px auto;
-  float: unset;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 1.35rem;
+}
+
+.Summary {
+  .card-body {
+    border: 2px solid $water-blue;
+    border-radius: 10px;
+    display: flex;
+    float: unset;
+
+    & > div {
+      width: 100%;
+
+      @media screen and (min-width: 768px) {
+        display: flex;
+      }
+    }
+  }
 
   p {
     color: #526b86;
   }
 
-  .amount-holder {
+  .summary__wrapper {
     margin: 25px 10px;
     border: 2px dotted $water-blue;
     border-radius: 10px;
   }
 
   .form-control-file {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     background-color: $water-blue;
     border-radius: 50%;
     cursor: pointer;
@@ -36,11 +53,7 @@ $skin-yellow: #ffdbac; // kids color
   }
 
   .form-group {
-    max-width: 50%;
-
-    @media only screen and (min-width: 576px) {
-      max-width: 50%;
-    }
+    max-width: 100%;
 
     .filelabel {
       background-color: blue;
@@ -57,11 +70,6 @@ $skin-yellow: #ffdbac; // kids color
         width: 110px;
         font-size: 14px;
       }
-      @media only screen and (min-width: 576px) {
-        height: 110px;
-        width: 110px;
-        font-size: 14px;
-      }
     }
 
     .filelabel:hover,
@@ -73,8 +81,9 @@ $skin-yellow: #ffdbac; // kids color
     }
 
     .fa-plus-circle {
-      left: 70px;
-      bottom: 60px;
+      left: 62px;
+      bottom: 61px;
+
       // top: 10px;   // 女の子のアイコンがなければ 、こちら
       position: relative;
       height: 28px;
@@ -84,17 +93,10 @@ $skin-yellow: #ffdbac; // kids color
       border-radius: 1.3rem;
       cursor: pointer;
 
-      // @media only screen and (min-width: 576px) {
-      // 	left: -25px;
-      // 	top: 12px;
-      // 	height: 33px;
-      //   width: 35px;
-
-      // left: 78px;
-      // top: 10px;
-      // height: 33px;
-      // width: 35px;
-      // }
+      @media only screen and (min-width: 768px) {
+        left: 70px;
+        bottom: 66px;
+      }
     }
 
     .filelabel img {
@@ -111,54 +113,79 @@ $skin-yellow: #ffdbac; // kids color
   }
 
   .avatar {
-    margin-top: 35px;
-    padding-left: 0;
-  }
-
-  .name {
-    margin: 10px 0 0 0;
-    font-weight: 600;
-    font-size: 1.75rem;
-    text-align: center;
-  }
-
-  .amount {
-    margin-top: 20px;
+    margin: 20px 0 25px 0;
     display: flex;
-    justify-content: space-between;
-    font-weight: 800;
-    font-size: 2rem;
-    border-bottom: 1.5px dotted $water-blue;
-  }
+    justify-content: center;
 
-  .income {
-    margin-top: 12px;
-    display: flex;
-    justify-content: space-between;
-    font-weight: 600;
-    font-size: 1.75rem;
-    border-bottom: 1.5px dotted $water-blue;
-    & > p {
-      color: #0eae10;
+    @media screen and (min-width: 768px) {
+      margin-top: 35px;
+      display: unset;
+      justify-content: unset;
     }
   }
 
-  .expenditure {
-    margin-top: 12px;
+  .name {
+    margin: 30px 0 0 40px;
+    font-weight: 600;
+    font-size: 1.7rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.75rem;
+      margin-left: unset;
+      text-align: center;
+      margin-top: 15px;
+    }
+  }
+
+  .summary__amount {
+    margin: 15px 15px 0;
+    padding: 0 10px;
     display: flex;
     justify-content: space-between;
-    font-weight: 600;
-    font-size: 1.75rem;
+    font-weight: 800;
+    font-size: 1.5rem;
+    border-bottom: 1.5px dotted $water-blue;
+
+    @media screen and (min-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+
+  .summary__income {
+    @include summary;
+    border-bottom: 1.5px dotted $water-blue;
+    
+    & > p {
+      color: #0eae10;
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.75rem;
+    }
+
+  }
+
+  .summary__expenditure {
+    @include summary;
 
     & > p {
       color: #ee8491;
     }
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.75rem;
+    }
+
+    
   }
 
   .girl-icon {
     // margin-top: 15px;  // 女の子のアイコンなしの時はこっち
-    width: 60px !important;
-    margin: 10px 0 5px 11px !important;
-  }
+    width: 45px !important;
+    margin: 14px 0 5px 16px !important;
 
+    @media screen and (min-width: 768px) {
+      width: 55px !important;
+    }
+  }
 }

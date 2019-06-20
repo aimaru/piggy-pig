@@ -1,14 +1,14 @@
-$theme-pink: #f59ba6;
+$color-theme-pink: #f59ba6;
 $water-blue: #bdeaee; // color for parents
 $skin-yellow: #ffdbac; // kids color
 
 @mixin summary {
-  margin: 10px 15px 0;
+  margin: 10px 12px 0;
   padding: 0 10px;
   display: flex;
   justify-content: space-between;
   font-weight: 600;
-  font-size: 1.35rem;
+  font-size: 1.45rem;
 }
 
 .Summary {
@@ -32,7 +32,7 @@ $skin-yellow: #ffdbac; // kids color
   }
 
   .summary__wrapper {
-    margin: 25px 10px;
+    margin: 25px 15px;
     border: 2px dotted $water-blue;
     border-radius: 10px;
   }
@@ -44,7 +44,6 @@ $skin-yellow: #ffdbac; // kids color
     border-radius: 50%;
     cursor: pointer;
     margin: 0 auto;
-    // background-image: url('./img/rocket.svg');
 
     @media only screen and (min-width: 576px) {
       width: 85px;
@@ -57,7 +56,7 @@ $skin-yellow: #ffdbac; // kids color
 
     .filelabel {
       background-color: blue;
-      color: white;
+      color: #fff;
       border: blue;
       height: 80px;
       width: 80px;
@@ -83,8 +82,6 @@ $skin-yellow: #ffdbac; // kids color
     .fa-plus-circle {
       left: 62px;
       bottom: 61px;
-
-      // top: 10px;   // 女の子のアイコンがなければ 、こちら
       position: relative;
       height: 28px;
       width: 30px;
@@ -126,7 +123,7 @@ $skin-yellow: #ffdbac; // kids color
 
   .name {
     margin: 30px 0 0 40px;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.7rem;
 
     @media screen and (min-width: 768px) {
@@ -138,15 +135,19 @@ $skin-yellow: #ffdbac; // kids color
   }
 
   .summary__amount {
-    margin: 15px 15px 0;
+    margin: 15px 12px 0;
     padding: 0 10px;
     display: flex;
     justify-content: space-between;
     font-weight: 800;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     border-bottom: 1.5px dotted $water-blue;
 
     @media screen and (min-width: 768px) {
+      font-size: 1.8rem;
+    }
+
+    @media screen and (min-width: 992px) {
       font-size: 2rem;
     }
   }
@@ -154,15 +155,28 @@ $skin-yellow: #ffdbac; // kids color
   .summary__income {
     @include summary;
     border-bottom: 1.5px dotted $water-blue;
-    
+
     & > p {
       color: #0eae10;
+      width: 50%;
+
+      @media screen and (min-width: 376px) and (max-width: 575px) {
+        width: unset;
+      }
+
+      @media screen and (min-width: 576px) {
+        width: inherit;
+      }
+
+      &:last-child {
+        text-align: right;
+        align-self: center;
+      }
     }
 
     @media screen and (min-width: 768px) {
-      font-size: 1.75rem;
+      font-size: 1.6rem;
     }
-
   }
 
   .summary__expenditure {
@@ -170,17 +184,28 @@ $skin-yellow: #ffdbac; // kids color
 
     & > p {
       color: #ee8491;
+      width: 50%;
+
+      @media screen and (min-width: 376px) and (max-width: 575px) {
+        width: unset;
+      }
+
+      @media screen and (min-width: 576px) {
+        width: inherit;
+      }
+
+      &:last-child {
+        text-align: right;
+        align-self: center;
+      }
     }
 
     @media screen and (min-width: 768px) {
-      font-size: 1.75rem;
+      font-size: 1.6rem;
     }
-
-    
   }
 
   .girl-icon {
-    // margin-top: 15px;  // 女の子のアイコンなしの時はこっち
     width: 45px !important;
     margin: 14px 0 5px 16px !important;
 

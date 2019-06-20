@@ -1,0 +1,44 @@
+$color-theme-pink: #f59ba6;
+$water-blue: #bdeaee; // color for parents
+$skin-yellow: #ffdbac; // kids color
+
+.AddTransactionButtons {
+  border: 2px solid #bdeaee;
+  border-radius: 10px;
+  margin: 35px auto;
+  float: unset;
+
+  h2 {
+    margin: -12px 0 0 17px;
+    text-shadow: 0.2px 0.2px moccasin;
+    position: absolute;
+    z-index: 2;
+    color: #8ad0d6f7;
+    background-color: #fff;
+    padding: 0 13px;
+    font-weight: 700;
+    font-size: 1.7rem;
+
+    @media screen and (min-width: 768px) {
+      margin: -10px 0 0 15px;
+      font-size: 1.6rem;
+      padding: 0 10px;
+    }
+
+    @media screen and (min-width: 992px) {
+      margin: -10px 0 0 20px;
+      font-size: 1.7rem;
+    }
+  }
+
+  .buttons__wrapper {
+    padding: 20px 15px 15px;
+    margin: 0;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px 0;
+    }
+  }
+}

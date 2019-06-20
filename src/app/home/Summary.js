@@ -57,13 +57,13 @@ render() {
             </Col>
 
             <Col xs={12} className="summary__income">
-              <p>Inkomst denna månad</p>
+              <p>Total inkomst denna månad</p>
               <p>
                 <span> {this.props.price} </span>kr</p>
             </Col>
 
             <Col xs={12} className="summary__expenditure">
-              <p>Utgifter denna månad</p>
+              <p>Total utgifter denna månad</p>
               <p className="">- <span>0</span> kr</p>
             </Col>
             </Row>

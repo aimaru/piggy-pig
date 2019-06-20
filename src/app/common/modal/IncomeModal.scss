@@ -1,9 +1,11 @@
-$main-pink: #f59ba6;
+$color-theme-pink: #f59ba6;
 $water-blue: #bdeaee; // color for parents
 $skin-yellow: #ffdbac; // kids color
+$color-save: #9acd32cf;
+$color-text-darkgray: #696969;
 
 .IncomeModal {
-
+  
   img {
     margin: 5px;
   }
@@ -14,10 +16,20 @@ $skin-yellow: #ffdbac; // kids color
     border: 1px solid #fff;
     border-radius: 25px;
     background-color: #fff;
+
+    @media screen and (min-width: 768px) {
+      width: 25px;
+      height: 25px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 45px;
+      height: 45px;
+    }
   }
 
   .savings-btn {
-    background-color: #9acd32cf !important;
+    background-color: $color-save !important;
 
     &:hover {
       background-color: #77a123cf !important;
@@ -25,48 +37,102 @@ $skin-yellow: #ffdbac; // kids color
   }
 
   .list-group-item {
-    width: 25%;
     border: unset;
     border-radius: 30px;
     background-color: #ffcc74;
     box-shadow: 2px 2px 4px #d3d3d3;
-    margin: 20px 8px;
-    font-size: 1.65rem;
+    font-size: 1.6rem;
     font-weight: 600;
     color: #f89174;
     padding: 0;
     outline: none;
-
-    @media only screen and (min-width: 576px) {
-      width: 100%;
-    }
+    width: 90%;
+    margin: 20px auto;
 
     & > span {
       margin-left: 10px;
-      color: #696969;
+      color: $color-text-darkgray;
+    }
+
+    @media screen and (min-width: 375px) and (max-width: 567px) {
+      width: 70%;
+    }
+
+    @media screen and (min-width: 568px) {
+      width: 55%;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      font-size: 1.35rem;
+      padding: 0 13px 0 0;
+
+      & > span {
+        margin-left: 0;
+        width: unset;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 100%;
+      font-size: 1.6rem;
+      padding: 0;
+
+      & > span {
+        padding: 0 15px 0 5px;
+      }
     }
   }
 }
 
-// Modal
+// Modal - income
+.modal__income {
+  .modal-title span {
+    color: $color-save;
+    font-weight: 700;
+  }
+}
+
+// Modal - for all
 .modal {
   .modal-header {
     border-bottom: unset !important;
+
+    .close {
+      color: #989ca3;
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      font-size: 3rem;
+    }
+  }
+
+  .modal-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #989ca3;
+    margin-top: 10px;
+    // float: left;
+    // padding-left: 15px;
   }
 
   .modal-body {
     padding: 30px;
   }
 
-  h4 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #989ca3;
-    margin-top: 10px;
+  // Show the modal
+  &.show.fade {
+    opacity: 1;
+    padding-top: 150px;
 
-    & > span {
-      color: #9acd32cf !important;
-      font-weight: 700;
+    .modal-dialog {
+      transform: none;
+    }
+  }
+
+  .fade {
+    .modal-dialog {
+      transform: none;
     }
   }
 
@@ -87,7 +153,7 @@ $skin-yellow: #ffdbac; // kids color
 
   .add-category {
     display: flex;
-    color: #f59ba6;
+    color: $color-theme-pink;
     margin-top: 5px;
     cursor: pointer;
 
@@ -110,7 +176,7 @@ $skin-yellow: #ffdbac; // kids color
   }
 
   .input-group-addon:last-child {
-    background-color: #f59ba6;
+    background-color: $color-theme-pink;
 
     & > i {
       color: #fff;
@@ -122,7 +188,7 @@ $skin-yellow: #ffdbac; // kids color
     padding: 15px 30px 25px 0;
 
     button {
-      background-color: #9acd32cf !important;
+      background-color: $color-save !important;
       border: unset;
       font-weight: 600;
       color: #fff;
@@ -134,7 +200,7 @@ $skin-yellow: #ffdbac; // kids color
       }
 
       &:first-child {
-        background-color: $main-pink !important;
+        background-color: $color-theme-pink !important;
         border: unset;
         font-weight: 600;
         color: #fff;
@@ -148,4 +214,9 @@ $skin-yellow: #ffdbac; // kids color
       }
     }
   }
+}
+
+// Overlay
+.modal-backdrop.fade {
+  opacity: 0.5;
 }

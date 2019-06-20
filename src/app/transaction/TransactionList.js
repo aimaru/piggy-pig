@@ -5,7 +5,7 @@ import "./TransactionList.scss";
 import TransactionItem from "./TransactionItem";
 
 const TransactionList = () => (
-  <Row className="show-grid">
+  <Row>
     <Col xs={9} className="TransactionList">
       <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
         <Tab eventKey={1} title="LISTA - hur mycket använt/sparat dina pengar">

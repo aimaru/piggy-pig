@@ -1,9 +1,9 @@
-import React, { Fragment} from 'react';
+import React, { Fragment } from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
 
 import './SelectChildModal.scss';
 import Header from '../../../components/Header';
-import Aggregation from './Aggregation';
+import Summary from './Summary';
 
 
 const SelectChildModal = () => (
@@ -14,12 +14,11 @@ const SelectChildModal = () => (
         
         <main className="SelectChildModal">
           <Grid fluid>
-            <Row className="show-grid">
+            <Row>
               <Col xs={12} sm={9} md={10} className="SelectChildPage">
       
       <Col xs={12} className="avatar">
-      <Aggregation />
-      <Aggregation />
+      <Summary />
       </Col>
       
     </Col>

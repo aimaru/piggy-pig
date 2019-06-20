@@ -1,7 +1,6 @@
-$theme-pink: #f59ba6;
-$theme-pink-hover: #ffd8dd;
-$theme-pink-active: #f77b8a;
-$white: #fff;
+$color-theme-pink: #f59ba6;
+$color-theme-pink-hover: #ffd8dd;
+$color-theme-pink-active: #f77b8a;
 
 .BottomMenu {
   cursor: pointer;
@@ -9,7 +8,7 @@ $white: #fff;
   position: fixed;
   z-index: 3;
   min-width: 100%;
-  background-color: $theme-pink;
+  background-color: $color-theme-pink;
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -17,7 +16,7 @@ $white: #fff;
 
   p {
     text-align: center;
-    color: $white;
+    color: #fff;
     margin-bottom: 10px;
     font-size: 1.1rem;
 
@@ -35,23 +34,23 @@ $white: #fff;
   }
 
   .list-group-item {
-    background-color: $theme-pink;
+    background-color: $color-theme-pink;
     border: none;
     border-radius: unset;
     padding: 0px 15px;
     width: 25%;
-    color: $white;
+    color: #fff;
     font-size: 1.1rem;
 
     &.active {
-      background-color: $theme-pink-active;
+      background-color: $color-theme-pink-active;
     }
 
     &:hover {
-      background-color: $theme-pink-hover;
+      background-color: $color-theme-pink-hover;
 
       & > p {
-        color: $theme-pink-active;
+        color: $color-theme-pink-active;
         font-weight: 600;
       }
     }
@@ -60,8 +59,8 @@ $white: #fff;
   .home-icon {
     width: 35px;
     height: 35px;
-    background-color: $white;
-    border: 1.5px solid $white;
+    background-color: #fff;
+    border: 1.5px solid #fff;
     border-radius: 50%;
     padding: 7px;
     margin: 8px 0 2px 2px;
@@ -70,8 +69,8 @@ $white: #fff;
   .piggybank-icon {
     width: 35px;
     height: 35px;
-    background-color: $white;
-    border: 1.5px solid $white;
+    background-color: #fff;
+    border: 1.5px solid #fff;
     border-radius: 50%;
     padding: 7px;
     margin: 8px 0 2px 2px;
@@ -80,8 +79,8 @@ $white: #fff;
   .money-icon {
     width: 35px;
     height: 35px;
-    background-color: $white;
-    border: 1.5px solid $white;
+    background-color: #fff;
+    border: 1.5px solid #fff;
     border-radius: 50%;
     padding: 7px;
     margin: 8px 0 2px 2px;
@@ -90,11 +89,10 @@ $white: #fff;
   .log-out-icon {
     width: 35px;
     height: 35px;
-    background-color: $white;
-    border: 1.5px solid $white;
+    background-color: #fff;
+    border: 1.5px solid #fff;
     border-radius: 50%;
     padding: 7px;
     margin: 8px 0 2px 2px;
   }
-
 }

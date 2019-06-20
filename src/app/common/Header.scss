@@ -1,9 +1,9 @@
-$theme-pink: #f59ba6;
+$color-theme-pink: #f59ba6;
 
 .Header {
   height: 50px;
   width: 100%;
-  background-color: $theme-pink;
+  background-color: $color-theme-pink;
   border-radius: unset;
   margin-bottom: unset;
 
@@ -25,7 +25,7 @@ $theme-pink: #f59ba6;
 
   img {
     width: 37px;
-    border: 1px solid #f59ba6;
+    border: 1px solid $color-theme-pink;
     border-radius: 75%;
     background-color: #fff;
     margin: 3px 0 5px 0;

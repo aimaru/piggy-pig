@@ -14,33 +14,31 @@ export default class BottomMenu extends React.Component {
 
   render() {
     return (
-      <footer>
-        <Col xs={12} className="BottomMenu">
-          <ListGroup defaultActiveKey="/">
+      <Col xs={12} className="BottomMenu">
+        <ListGroup defaultActiveKey="/">
 
-            <ListGroup.Item action href="/">
-              <img src={house} alt="house icon" className="home-icon" />
-              <p>Hem</p>
-            </ListGroup.Item>
+          <ListGroup.Item action href="/">
+            <img src={house} alt="house icon" className="home-icon" />
+            <p>Hem</p>
+          </ListGroup.Item>
 
-            <ListGroup.Item action href="#" >
-              <img src={piggyMenu} alt="piggybank icon" className="piggybank-icon" />
-              <p>Transaktion</p>
-            </ListGroup.Item>
-            
-            <ListGroup.Item action href="#">
-              <img src={getMoney} alt="money icon" className="money-icon" />
-              <p>Uppgifter</p>
-            </ListGroup.Item>
+          <ListGroup.Item action href="#" >
+            <img src={piggyMenu} alt="piggybank icon" className="piggybank-icon" />
+            <p>Transaktion</p>
+          </ListGroup.Item>
+          
+          <ListGroup.Item action href="#">
+            <img src={getMoney} alt="money icon" className="money-icon" />
+            <p>Uppgifter</p>
+          </ListGroup.Item>
 
-            <ListGroup.Item action href="#">
-              <img src={logOut} alt="log out icon" className="log-out-icon" />
-              <p>Logg ut</p>
-            </ListGroup.Item>
+          <ListGroup.Item action href="#">
+            <img src={logOut} alt="log out icon" className="log-out-icon" />
+            <p>Logg ut</p>
+          </ListGroup.Item>
 
-          </ListGroup>
-        </Col>
-      </footer>
+        </ListGroup>
+      </Col>
     );
   }
 };

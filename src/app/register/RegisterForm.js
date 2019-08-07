@@ -6,18 +6,20 @@ import "./RegisterForm.scss";
 
 
 const initialState = {
+  username: '',
   email: '',
   password: '',
-  username: '',
-  disableButton: false,
-  canSubmit: false,
+  usernameError: null,
+  emailError: null,
+  passwordError: null,
+  // disableButton: true
 }
 
 export default class RegisterForm extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = initialState;
-    console.log('state', this.state)
   }
 
   componentWillUnmount() {
@@ -25,82 +27,107 @@ export default class RegisterForm extends React.Component {
   }
 
   handleUsernameChange = e => {
-    const username = e.target.value;
     this.setState({
-      // username: e.target.value
-      username: username
+      username: e.target.value
     });
-    console.log('user: ', e.target.value);
   }
 
   handleEmailChange = e => {
     this.setState({
       email: e.target.value
     });
-    console.log('email', e.target.value)
   }
 
   handlePasswordChange = e => {
     this.setState({
       password: e.target.value
     });
-    console.log('password: ', e.target.value);
   }
 
-  handlePasswordRepeatChange = e => {
-    this.setState({
-      password: e.target.value
-    });
-    console.log('password: ', e.target.value);
+  reset = () => {
+    this.setState ({
+      usernameError: '',
+      emailError: '',
+      passwordError: ''
+    })
   }
+
+  validate = () => {
+    const { username, email, password } = this.state;
+  
+    if (username.length === 0) {
+      this.setState({
+        usernameError: 'Ange ett användarnamn.'
+      })  
+    }
+  
+    if (email.length === 0 ) {
+      this.setState({
+        emailError: 'Ange ditt email.'
+      })
+    }
+
+    if (password.length === 0) {
+      this.setState({
+        passwordError: 'Ange ett lösenord.'
+      })
+    }
+  }
+  
+  handleRegisterSubmit = e => {
+    e.preventDefault();
+    const { username, email, password } = this.state;
+    this.reset();
+    this.validate();
+
+    if (username && email && password) {
+      const { registerUser } = this.props;
+      // registerUser(username, email, password);
+    }
+  }
+  
 
   render() {
-    // const { email, password, username} = this.state;
-  
+    const { username, email, password, usernameError, emailError, passwordError } = this.state;
+
     return (
       <div className="RegisterForm">
         <Col xs={12} sm={7} className="login__inner">
           <h2>Registrera dig</h2>
 
-          <Form>
-            <Form.Group controlId="formBasicName">
+          <Form onSubmit={e => this.handleRegisterSubmit(e)}>
+            <Form.Group controlId="username">
               <Form.Control 
                 type="name" 
-                placeholder="Användarname"
-                onChange={ e => this.handleUsernameChange(e) }
+                placeholder="Användarnamn"
+                onChange={e => this.handleUsernameChange(e)}
+                value={username}
               />
+              <Form.Text className="error-text">{usernameError}</Form.Text> 
             </Form.Group>
 
-            <Form.Group controlId="formBasicEmail">
+            <Form.Group controlId="email">
               <Form.Control 
-                type="email" 
+                type="email"
                 placeholder="E-post" 
-                // value={email}
-                onChange={ e => this.handleEmailChange(e)}
+                onChange={e => this.handleEmailChange(e)}
+                value={email}
               />
+              <Form.Text className="error-text">{emailError}</Form.Text> 
             </Form.Group>
 
-            <Form.Group controlId="formBasicPassword">
+            <Form.Group controlId="password">
               <Form.Control 
-                type="password" 
+                type="password"
                 placeholder="Lösenord" 
-                onChange={ e => this.handlePasswordChange(e) }
+                value={password}
+                onChange={e => this.handlePasswordChange(e)}
               />
+              <Form.Text className="error-text">{passwordError}</Form.Text> 
             </Form.Group>
 
-            <Form.Group controlId="formBasicPasswordRepeat">
-              <Form.Control 
-                type="password" 
-                placeholder="Bekräfta lösenord" 
-                onChange={ e => this.handlePasswordRepeatChange(e) }
-              />
-            </Form.Group>
-
-            <Button variant="primary" type="submit" className="login__button">
-              Logga in
-              {/*  
-                // onSubmit={e => this.handleSubmit(e)}
-                // onClick={e => this.handleSubmit(e)} */}
+            <Button type="submit" className="login__button">
+              Registrera
             </Button>
           </Form>
 
@@ -109,5 +136,3 @@ export default class RegisterForm extends React.Component {
     );
   }
 }
-
-

@@ -8,7 +8,7 @@
     "express": "^4.17.1",
     "mongod": "^2.0.0",
     "mongoose": "^5.5.13",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "prettier": "^1.17.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
